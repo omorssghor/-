@@ -512,7 +512,7 @@ const SUPABASE_URL =
 "https://gzujcqjpxypcoiqhpvvu.supabase.co";
 
 const SUPABASE_KEY =
-sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF
+"sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF"
 
 
 /*
@@ -562,11 +562,12 @@ async function addComment(){
       await window.supabaseClient
       .from("comments")
       .insert([
-        {
-          name:name,
-          comment:comment
-        }
-      ]);
+  {
+    id: crypto.randomUUID(),
+    name: name,
+    comment: comment
+  }
+]);
 
     if(error){
 
