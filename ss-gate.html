@@ -565,7 +565,8 @@ async function addComment(){
   {
     id: crypto.randomUUID(),
     name: name,
-    comment: comment
+    message: comment
+    
   }
 ]);
 
@@ -605,7 +606,7 @@ async function loadComments(){
   const { data, error } =
     await window.supabaseClient
     .from("comments")
-    .select("name, comment, created_at")
+    .select("name, message, created_at")
     .order("created_at", {ascending:false});
 
   if(error){
@@ -636,8 +637,7 @@ async function loadComments(){
     const p =
       document.createElement("div");
 
-    p.textContent =
-      item.comment;
+    p.textContent=item.message;
 
     div.appendChild(strong);
     div.appendChild(p);
