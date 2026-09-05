@@ -534,9 +534,6 @@ script.onload = () => {
 
   loadComments();
 
-};
-
-
 /* =========================
    ADD COMMENT
 ========================= */
@@ -550,9 +547,7 @@ async function addComment(){
     document.getElementById("comment").value.trim();
 
   if(!name || !comment){
-
     alert("দয়া করে নাম এবং মন্তব্য লিখুন।");
-
     return;
   }
 
@@ -562,20 +557,16 @@ async function addComment(){
       await window.supabaseClient
       .from("comments")
       .insert([
-  {
-    id: crypto.randomUUID(),
-    name: name,
-    message: comment
-    
-  }
-]);
+        {
+          id: crypto.randomUUID(),
+          name: name,
+          message: comment
+        }
+      ]);
 
     if(error){
-
       console.error(error);
-
       alert(error.message);
-
       return;
     }
 
@@ -589,8 +580,7 @@ async function addComment(){
   }catch(error){
 
     console.error(error);
-
-    alert("সমস্যা হয়েছে। আবার চেষ্টা করুন।");
+    alert(error.message);
   }
 }
 
@@ -610,9 +600,7 @@ async function loadComments(){
     .order("created_at", {ascending:false});
 
   if(error){
-
     console.error(error);
-
     return;
   }
 
@@ -637,7 +625,8 @@ async function loadComments(){
     const p =
       document.createElement("div");
 
-    p.textContent=item.message;
+    p.textContent =
+      item.message;
 
     div.appendChild(strong);
     div.appendChild(p);
@@ -647,8 +636,6 @@ async function loadComments(){
   });
 }
 
-
-/* Load Supabase */
 
 document.head.appendChild(script);
 
