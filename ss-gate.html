@@ -573,7 +573,7 @@ async function addComment(){
 
       console.error(error);
 
-      alert("মন্তব্য পাঠানো যায়নি।");
+      alert(error.message);
 
       return;
     }
