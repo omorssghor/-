@@ -3,260 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0f766e">
 
-<title>ওমর এস এস ঘর | SS গেট, গ্রিল ও দরজা</title>
-
-<meta name="description" content="ওমর এস এস ঘর, বিরামপুর, দিনাজপুর। SS গেট, গ্রিল ও দরজার বিভিন্ন ডিজাইন দেখুন এবং মূল্য জানতে যোগাযোগ করুন।">
+<title>ওমর এস এস ঘর</title>
 
 <style>
 *{
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
   margin:0;
-  font-family:Arial,"Noto Sans Bengali",sans-serif;
-  background:#f1f5f9;
-  color:#172033;
+  font-family:Arial,sans-serif;
+  background:#f5f5f5;
+  color:#222;
 }
 
 header{
-  background:linear-gradient(135deg,#0f766e,#115e59);
+  background:#111;
   color:white;
   text-align:center;
-  padding:35px 15px;
+  padding:20px 10px;
 }
 
 header h1{
   margin:0 0 8px;
-  font-size:32px;
+  font-size:28px;
 }
 
 header p{
   margin:0;
-  font-size:17px;
-}
-
-.container{
-  width:min(1000px,calc(100% - 24px));
-  margin:25px auto 50px;
-}
-
-.intro{
-  background:white;
-  border-radius:18px;
-  padding:22px;
-  text-align:center;
-  box-shadow:0 5px 20px #0001;
-  margin-bottom:22px;
-}
-
-.intro h2{
-  margin:0 0 8px;
-}
-
-.intro p{
-  margin:0;
-  color:#64748b;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-.card{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 5px 20px #0002;
-}
-
-.design-image{
-  width:100%;
-  height:300px;
-  object-fit:cover;
-  display:block;
-  cursor:pointer;
-}
-
-.card-body{
-  padding:17px;
-}
-
-.card h3{
-  margin:0 0 8px;
-  font-size:20px;
-}
-
-.info{
-  color:#475569;
-  line-height:1.7;
   font-size:15px;
 }
 
-.price{
-  margin-top:7px;
-  font-size:19px;
-  font-weight:bold;
-  color:#0f766e;
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:15px;
+}
+
+.design{
+  background:white;
+  margin-bottom:25px;
+  padding:12px;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+.design img{
+  width:100%;
+  max-height:500px;
+  object-fit:contain;
+  border-radius:10px;
+  cursor:pointer;
+  background:#eee;
 }
 
 .buttons{
   display:flex;
   gap:8px;
-  flex-wrap:wrap;
-  margin-top:14px;
+  margin-top:10px;
 }
 
-.buttons a,
 .buttons button{
+  flex:1;
+  padding:11px 5px;
   border:0;
-  border-radius:9px;
-  padding:10px 13px;
-  color:white;
-  text-decoration:none;
+  border-radius:8px;
   cursor:pointer;
   font-size:14px;
 }
 
-.call{
-  background:#2563eb;
-}
-
-.whatsapp{
-  background:#16a34a;
-}
-
-.share{
-  background:#7c3aed;
-}
-
-.comment-section{
-  margin-top:18px;
-  border-top:1px solid #e2e8f0;
-  padding-top:15px;
-}
-
-.comment-title{
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-.comment-input,
-.comment-text{
-  width:100%;
-  padding:11px;
-  border:1px solid #cbd5e1;
-  border-radius:9px;
-  font-size:14px;
-  margin-bottom:8px;
-}
-
-.comment-text{
-  min-height:70px;
-  resize:vertical;
-}
-
-.comment-submit{
-  width:100%;
-  border:0;
-  background:#0f766e;
+.view-btn{
+  background:#222;
   color:white;
-  padding:11px;
-  border-radius:9px;
-  cursor:pointer;
-  font-weight:bold;
 }
 
-.comments-list{
-  margin-top:13px;
+.share-btn{
+  background:#eee;
+}
+
+.comment-box{
+  margin-top:15px;
+}
+
+.comment-box input,
+.comment-box textarea{
+  width:100%;
+  padding:10px;
+  margin-top:7px;
+  border:1px solid #ccc;
+  border-radius:7px;
+  font-size:15px;
+}
+
+.comment-box textarea{
+  height:80px;
+  resize:none;
+}
+
+.comment-box button{
+  margin-top:8px;
+  padding:10px 18px;
+  border:0;
+  border-radius:7px;
+  background:#111;
+  color:white;
+  cursor:pointer;
+}
+
+.comments{
+  margin-top:15px;
 }
 
 .comment{
-  background:#f8fafc;
-  border:1px solid #e2e8f0;
-  border-radius:10px;
-  padding:11px;
-  margin-bottom:8px;
+  background:#f1f1f1;
+  padding:10px;
+  margin-top:8px;
+  border-radius:8px;
 }
 
-.comment-name{
-  font-weight:bold;
+.comment strong{
+  display:block;
   margin-bottom:4px;
 }
 
-.comment-message{
-  color:#334155;
-  white-space:pre-wrap;
-}
-
 .contact{
-  margin-top:25px;
-  background:#0f172a;
-  color:white;
-  border-radius:18px;
-  padding:25px;
   text-align:center;
-}
-
-.contact h2{
-  margin-top:0;
-}
-
-.contact p{
-  line-height:1.8;
+  padding:25px 10px;
+  background:#111;
+  color:white;
 }
 
 .contact a{
+  display:inline-block;
+  margin:6px;
+  padding:11px 18px;
+  border-radius:8px;
   color:white;
   text-decoration:none;
+  background:#198754;
 }
 
+.contact .call{
+  background:#0d6efd;
+}
+
+/* Image Viewer */
 .viewer{
   display:none;
   position:fixed;
-  inset:0;
   z-index:9999;
-  background:#000f;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.95);
   align-items:center;
   justify-content:center;
 }
 
 .viewer img{
-  max-width:94%;
-  max-height:82vh;
+  max-width:90%;
+  max-height:85%;
   object-fit:contain;
-  border-radius:10px;
-}
-
-.close,
-.prev,
-.next{
-  position:absolute;
-  color:white;
-  cursor:pointer;
-  user-select:none;
 }
 
 .close{
-  top:10px;
+  position:absolute;
+  top:15px;
   right:20px;
-  font-size:42px;
+  color:white;
+  font-size:38px;
+  cursor:pointer;
 }
 
 .prev,
 .next{
+  position:absolute;
   top:50%;
   transform:translateY(-50%);
-  font-size:55px;
-  padding:15px;
+  color:white;
+  font-size:45px;
+  cursor:pointer;
+  padding:10px;
+  user-select:none;
 }
 
 .prev{
@@ -267,28 +197,17 @@ header p{
   right:5px;
 }
 
-.viewer-title{
+.viewer-share{
   position:absolute;
   bottom:20px;
-  color:white;
-  background:#0009;
-  padding:8px 14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  color:#111;
+  border:0;
+  padding:10px 20px;
   border-radius:8px;
-}
-
-@media(max-width:700px){
-
-  header h1{
-    font-size:26px;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .design-image{
-    height:280px;
-  }
+  font-size:16px;
 }
 </style>
 </head>
@@ -296,659 +215,193 @@ header p{
 <body>
 
 <header>
-  <h1>🏪 ওমর এস এস ঘর</h1>
-  <p>SS গেট • SS গ্রিল • SS দরজা</p>
+  <h1>ওমর এস এস ঘর</h1>
+  <p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
 </header>
 
-<main class="container">
+<div class="container">
 
-<section class="intro">
-  <h2>✨ আমাদের SS ডিজাইন</h2>
-  <p>
-    পছন্দের ডিজাইন দেখুন, বড় করে ছবি দেখুন,
-    শেয়ার করুন এবং ডিজাইনের নিচে মন্তব্য করুন।
-  </p>
-</section>
+  <!-- Design 1 -->
+  <div class="design">
+    <img
+      src="20221123_152953_Original.jpeg"
+      alt="SS Design 1"
+      onclick="openImage(0)"
+    >
 
-<section class="gallery">
+    <div class="buttons">
+      <button class="view-btn" onclick="openImage(0)">ছবি বড় করে দেখুন</button>
+      <button class="share-btn" onclick="shareDesign(0)">শেয়ার</button>
+    </div>
 
-<!-- DESIGN 1 -->
+    <div class="comment-box">
+      <h3>মন্তব্য করুন</h3>
 
-<div class="card" id="design-1">
+      <input
+        type="text"
+        id="name-0"
+        placeholder="আপনার নাম"
+      >
 
-<img
-  class="design-image"
-  src="20221123_152953_Original.jpeg"
-  alt="SS গেট ডিজাইন ১"
-  onclick="openImage(0)"
->
+      <textarea
+        id="message-0"
+        placeholder="আপনার মন্তব্য লিখুন"
+      ></textarea>
 
-<div class="card-body">
+      <button onclick="addComment(0)">মন্তব্য পাঠান</button>
 
-<h3>SS গেট ডিজাইন ১</h3>
-
-<div class="info">
-📏 সাইজ: ৬ × ৭ ফুট
-</div>
-
-<div class="price">
-💰 মূল্য: ২৫,০০০ টাকা থেকে
-</div>
-
-<div class="buttons">
-
-<a class="call" href="tel:01341241433">
-📞 কল
-</a>
-
-<a
-  class="whatsapp"
-  href="https://wa.me/8801816845577"
-  target="_blank"
-  rel="noopener"
->
-💬 WhatsApp
-</a>
-
-<button class="share" onclick="shareDesign(0)">
-🔗 Share
-</button>
-
-</div>
-
-<div class="comment-section">
-
-<div class="comment-title">
-💬 এই ডিজাইন সম্পর্কে মন্তব্য
-</div>
-
-<input
-  class="comment-input"
-  id="name-0"
-  type="text"
-  placeholder="আপনার নাম"
->
-
-<textarea
-  class="comment-text"
-  id="message-0"
-  placeholder="আপনার মন্তব্য লিখুন"
-></textarea>
-
-<button
-  class="comment-submit"
-  onclick="addComment(0)"
->
-মন্তব্য করুন
-</button>
-
-<div
-  class="comments-list"
-  id="comments-0"
-></div>
-
-</div>
-
-</div>
-</div>
+      <div class="comments" id="comments-0"></div>
+    </div>
+  </div>
 
 
-<!-- DESIGN 2 -->
+  <!-- Design 2 -->
+  <div class="design">
+    <img
+      src="20230311_213007_Original.jpeg"
+      alt="SS Design 2"
+      onclick="openImage(1)"
+    >
 
-<div class="card" id="design-2">
+    <div class="buttons">
+      <button class="view-btn" onclick="openImage(1)">ছবি বড় করে দেখুন</button>
+      <button class="share-btn" onclick="shareDesign(1)">শেয়ার</button>
+    </div>
 
-<img
-  class="design-image"
-  src="20230311_213007_Original.jpeg"
-  alt="SS গেট ডিজাইন ২"
-  onclick="openImage(1)"
->
+    <div class="comment-box">
+      <h3>মন্তব্য করুন</h3>
 
-<div class="card-body">
+      <input
+        type="text"
+        id="name-1"
+        placeholder="আপনার নাম"
+      >
 
-<h3>SS গেট ডিজাইন ২</h3>
+      <textarea
+        id="message-1"
+        placeholder="আপনার মন্তব্য লিখুন"
+      ></textarea>
 
-<div class="info">
-📏 সাইজ: ৬ × ৭ ফুট
-</div>
+      <button onclick="addComment(1)">মন্তব্য পাঠান</button>
 
-<div class="price">
-💰 মূল্য: ২৫,০০০ টাকা থেকে
-</div>
+      <div class="comments" id="comments-1"></div>
+    </div>
+  </div>
 
-<div class="buttons">
 
-<a class="call" href="tel:01341241433">
-📞 কল
-</a>
+  <!-- Design 3 -->
+  <div class="design">
+    <img
+      src="B61AE4A9-9817-42AB-BB75-84E24E50C692.png"
+      alt="SS Design 3"
+      onclick="openImage(2)"
+    >
 
-<a
-  class="whatsapp"
-  href="https://wa.me/8801816845577"
-  target="_blank"
-  rel="noopener"
->
-💬 WhatsApp
-</a>
+    <div class="buttons">
+      <button class="view-btn" onclick="openImage(2)">ছবি বড় করে দেখুন</button>
+      <button class="share-btn" onclick="shareDesign(2)">শেয়ার</button>
+    </div>
 
-<button class="share" onclick="shareDesign(1)">
-🔗 Share
-</button>
+    <div class="comment-box">
+      <h3>মন্তব্য করুন</h3>
 
-</div>
+      <input
+        type="text"
+        id="name-2"
+        placeholder="আপনার নাম"
+      >
 
-<div class="comment-section">
+      <textarea
+        id="message-2"
+        placeholder="আপনার মন্তব্য লিখুন"
+      ></textarea>
 
-<div class="comment-title">
-💬 এই ডিজাইন সম্পর্কে মন্তব্য
-</div>
+      <button onclick="addComment(2)">মন্তব্য পাঠান</button>
 
-<input
-  class="comment-input"
-  id="name-1"
-  type="text"
-  placeholder="আপনার নাম"
->
+      <div class="comments" id="comments-2"></div>
+    </div>
+  </div>
 
-<textarea
-  class="comment-text"
-  id="message-1"
-  placeholder="আপনার মন্তব্য লিখুন"
-></textarea>
 
-<button
-  class="comment-submit"
-  onclick="addComment(1)"
->
-মন্তব্য করুন
-</button>
+  <!-- Design 4 -->
+  <div class="design">
+    <img
+      src="IMG-20230201-WA0001_Original.jpeg"
+      alt="SS Design 4"
+      onclick="openImage(3)"
+    >
 
-<div
-  class="comments-list"
-  id="comments-1"
-></div>
+    <div class="buttons">
+      <button class="view-btn" onclick="openImage(3)">ছবি বড় করে দেখুন</button>
+      <button class="share-btn" onclick="shareDesign(3)">শেয়ার</button>
+    </div>
+
+    <div class="comment-box">
+      <h3>মন্তব্য করুন</h3>
+
+      <input
+        type="text"
+        id="name-3"
+        placeholder="আপনার নাম"
+      >
+
+      <textarea
+        id="message-3"
+        placeholder="আপনার মন্তব্য লিখুন"
+      ></textarea>
+
+      <button onclick="addComment(3)">মন্তব্য পাঠান</button>
+
+      <div class="comments" id="comments-3"></div>
+    </div>
+  </div>
 
 </div>
 
-</div>
-</div>
 
+<div class="contact">
+  <h2>যোগাযোগ করুন</h2>
 
-<!-- DESIGN 3 -->
+  <a
+    href="https://wa.me/8801816845577"
+    target="_blank"
+  >
+    WhatsApp
+  </a>
 
-<div class="card" id="design-3">
+  <a
+    class="call"
+    href="tel:01341241433"
+  >
+    কল করুন
+  </a>
 
-<img
-  class="design-image"
-  src="B61AE4A9-9817-42AB-BB75-84E24E50C692.png"
-  alt="SS গেট ডিজাইন ৩"
-  onclick="openImage(2)"
->
-
-<div class="card-body">
-
-<h3>SS গেট ডিজাইন ৩</h3>
-
-<div class="info">
-📏 সাইজ: ৬ × ৭ ফুট
-</div>
-
-<div class="price">
-💰 মূল্য: ২৫,০০০ টাকা থেকে
-</div>
-
-<div class="buttons">
-
-<a class="call" href="tel:01341241433">
-📞 কল
-</a>
-
-<a
-  class="whatsapp"
-  href="https://wa.me/8801816845577"
-  target="_blank"
-  rel="noopener"
->
-💬 WhatsApp
-</a>
-
-<button class="share" onclick="shareDesign(2)">
-🔗 Share
-</button>
-
-</div>
-
-<div class="comment-section">
-
-<div class="comment-title">
-💬 এই ডিজাইন সম্পর্কে মন্তব্য
-</div>
-
-<input
-  class="comment-input"
-  id="name-2"
-  type="text"
-  placeholder="আপনার নাম"
->
-
-<textarea
-  class="comment-text"
-  id="message-2"
-  placeholder="আপনার মন্তব্য লিখুন"
-></textarea>
-
-<button
-  class="comment-submit"
-  onclick="addComment(2)"
->
-মন্তব্য করুন
-</button>
-
-<div
-  class="comments-list"
-  id="comments-2"
-></div>
-
-</div>
-
-</div>
+  <p>কলেজ বাজার পেট্রোল পাম্পের সামনে, বিরামপুর, দিনাজপুর</p>
 </div>
 
 
-<!-- DESIGN 4 -->
+<!-- Image Viewer -->
 
-<div class="card" id="design-4">
+<div class="viewer" id="viewer">
 
-<img
-  class="design-image"
-  src="IMG-20230201-WA0001_Original.jpeg"
-  alt="SS গেট ডিজাইন ৪"
-  onclick="openImage(3)"
->
+  <span class="close" onclick="closeViewer()">×</span>
 
-<div class="card-body">
+  <span class="prev" onclick="changeImage(-1)">‹</span>
 
-<h3>SS গেট ডিজাইন ৪</h3>
+  <img id="viewerImage" src="" alt="Design">
 
-<div class="info">
-📏 সাইজ: ৬ × ৭ ফুট
-</div>
+  <span class="next" onclick="changeImage(1)">›</span>
 
-<div class="price">
-💰 মূল্য: ২৫,০০০ টাকা থেকে
-</div>
-
-<div class="buttons">
-
-<a class="call" href="tel:01341241433">
-📞 কল
-</a>
-
-<a
-  class="whatsapp"
-  href="https://wa.me/8801816845577"
-  target="_blank"
-  rel="noopener"
->
-💬 WhatsApp
-</a>
-
-<button class="share" onclick="shareDesign(3)">
-🔗 Share
-</button>
+  <button class="viewer-share" onclick="shareCurrentImage()">
+    শেয়ার
+  </button>
 
 </div>
 
-<div class="comment-section">
 
-<div class="comment-title">
-💬 এই ডিজাইন সম্পর্কে মন্তব্য
-</div>
-
-<input
-  class="comment-input"
-  id="name-3"
-  type="text"
-  placeholder="আপনার নাম"
->
-
-<textarea
-  class="comment-text"
-  id="message-3"
-  placeholder="আপনার মন্তব্য লিখুন"
-></textarea>
-
-<button
-  class="comment-submit"
-  onclick="addComment(3)"
->
-মন্তব্য করুন
-</button>
-
-<div
-  class="comments-list"
-  id="comments-3"
-></div>
-
-</div>
-
-</div>
-</div>
-
-</section>
-
-
-<section class="contact">
-
-<h2>📞 যোগাযোগ করুন</h2>
-
-<p>
-🏪 ওমর এস এস ঘর<br>
-কলেজ বাজার পেট্রোল পাম্পের সামনে,<br>
-বিরামপুর, দিনাজপুর।
-</p>
-
-<p>
-
-📞
-<a href="tel:01341241433">
-01341241433
-</a>
-
-<br>
-
-💬 WhatsApp:
-<a
-  href="https://wa.me/8801816845577"
-  target="_blank"
-  rel="noopener"
->
-01816845577
-</a>
-
-<br>
-
-✉️
-<a href="mailto:omorssghor@gmail.com">
-omorssghor@gmail.com
-</a>
-
-</p>
-
-</section>
-
-</main>
-
-
-<!-- IMAGE VIEWER -->
-
-<div
-  class="viewer"
-  id="viewer"
-  onclick="closeViewer(event)"
->
-
-<span
-  class="close"
-  onclick="closeViewer(event)"
->
-×
-</span>
-
-<span
-  class="prev"
-  onclick="event.stopPropagation(); changeImage(-1)"
->
-‹
-</span>
-
-<img
-  id="viewerImage"
-  src=""
-  alt=""
->
-
-<span
-  class="next"
-  onclick="event.stopPropagation(); changeImage(1)"
->
-›
-</span>
-
-<div
-  class="viewer-title"
-  id="viewerTitle"
-></div>
-
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-
-"use strict";
-
-
-/* =========================
-   IMAGES
-========================= */
-
-const images = [
-
-{
-  src:"20221123_152953_Original.jpeg",
-  title:"SS গেট ডিজাইন ১"
-},
-
-{
-  src:"20230311_213007_Original.jpeg",
-  title:"SS গেট ডিজাইন ২"
-},
-
-{
-  src:"B61AE4A9-9817-42AB-BB75-84E24E50C692.png",
-  title:"SS গেট ডিজাইন ৩"
-},
-
-{
-  src:"IMG-20230201-WA0001_Original.jpeg",
-  title:"SS গেট ডিজাইন ৪"
-}
-
-];
-
-
-let currentImage = 0;
-let startX = 0;
-
-
-/* =========================
-   IMAGE VIEWER
-========================= */
-
-function openImage(index){
-
-currentImage = index;
-
-document.getElementById("viewerImage").src =
-images[currentImage].src;
-
-document.getElementById("viewerImage").alt =
-images[currentImage].title;
-
-document.getElementById("viewerTitle").textContent =
-images[currentImage].title;
-
-document.getElementById("viewer").style.display =
-"flex";
-
-}
-
-
-function closeViewer(event){
-
-if(
-!event ||
-event.target.id === "viewer" ||
-event.target.classList.contains("close")
-){
-
-document.getElementById("viewer").style.display =
-"none";
-
-}
-
-}
-
-
-function changeImage(direction){
-
-currentImage += direction;
-
-if(currentImage < 0){
-currentImage = images.length - 1;
-}
-
-if(currentImage >= images.length){
-currentImage = 0;
-}
-
-openImage(currentImage);
-
-}
-
-
-/* =========================
-   KEYBOARD IMAGE CONTROL
-========================= */
-
-document.addEventListener(
-"keydown",
-function(event){
-
-const viewer =
-document.getElementById("viewer");
-
-if(viewer.style.display !== "flex"){
-return;
-}
-
-if(event.key === "ArrowLeft"){
-changeImage(-1);
-}
-
-if(event.key === "ArrowRight"){
-changeImage(1);
-}
-
-if(event.key === "Escape"){
-viewer.style.display = "none";
-}
-
-}
-);
-
-
-/* =========================
-   SWIPE
-========================= */
-
-const viewer =
-document.getElementById("viewer");
-
-viewer.addEventListener(
-"touchstart",
-function(event){
-
-startX =
-event.touches[0].clientX;
-
-},
-{passive:true}
-);
-
-
-viewer.addEventListener(
-"touchend",
-function(event){
-
-const endX =
-event.changedTouches[0].clientX;
-
-const difference =
-endX - startX;
-
-if(Math.abs(difference) > 50){
-
-if(difference < 0){
-changeImage(1);
-}else{
-changeImage(-1);
-}
-
-}
-
-},
-{passive:true}
-);
-
-
-/* =========================
-   SHARE DESIGN
-========================= */
-
-async function shareDesign(index){
-
-const url =
-window.location.origin +
-window.location.pathname +
-"?design=" +
-(index + 1);
-
-const text =
-"ওমর এস এস ঘর-এর " +
-images[index].title +
-" দেখুন।";
-
-if(navigator.share){
-
-try{
-
-await navigator.share({
-title:images[index].title,
-text:text,
-url:url
-});
-
-}catch(error){
-
-}
-
-}else{
-
-try{
-
-await navigator.clipboard.writeText(url);
-
-alert(
-"এই ডিজাইনের লিংক কপি হয়েছে। এখন Facebook বা WhatsApp-এ শেয়ার করুন।"
-);
-
-}catch(error){
-
-alert(
-"লিংক কপি করা যায়নি।"
-);
-
-}
-
-}
-
-}
-
-
-/* =========================
-   SUPABASE
-========================= */
 
 const SUPABASE_URL =
 "https://gzujcqjpxypcoiqhpvvu.supabase.co";
@@ -956,306 +409,338 @@ const SUPABASE_URL =
 const SUPABASE_KEY =
 "sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF";
 
-
-const script =
-document.createElement("script");
-
-script.src =
-"https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
-
-
-script.onload = function(){
-
-window.supabaseClient =
+const supabaseClient =
 window.supabase.createClient(
-SUPABASE_URL,
-SUPABASE_KEY
+  SUPABASE_URL,
+  SUPABASE_KEY
 );
 
-loadComments();
 
-};
+const images = [
+  "20221123_152953_Original.jpeg",
+  "20230311_213007_Original.jpeg",
+  "B61AE4A9-9817-42AB-BB75-84E24E50C692.png",
+  "IMG-20230201-WA0001_Original.jpeg"
+];
 
-
-script.onerror = function(){
-
-console.error(
-"Supabase library load failed."
-);
-
-};
+let currentImage = 0;
 
 
-document.head.appendChild(script);
+function openImage(index){
+
+  currentImage = index;
+
+  document.getElementById("viewerImage").src =
+    images[index];
+
+  document.getElementById("viewer").style.display =
+    "flex";
+}
 
 
-/* =========================
-   ADD COMMENT
-========================= */
+function closeViewer(){
+
+  document.getElementById("viewer").style.display =
+    "none";
+}
+
+
+function changeImage(direction){
+
+  currentImage += direction;
+
+  if(currentImage < 0){
+    currentImage = images.length - 1;
+  }
+
+  if(currentImage >= images.length){
+    currentImage = 0;
+  }
+
+  document.getElementById("viewerImage").src =
+    images[currentImage];
+}
+
+
+async function shareDesign(index){
+
+  const text =
+    "ওমর এস এস ঘর - SS ও গ্লাসের কাজ";
+
+  const url =
+    window.location.href + "#design-" + (index + 1);
+
+  if(navigator.share){
+
+    try{
+
+      await navigator.share({
+        title:"ওমর এস এস ঘর",
+        text:text,
+        url:url
+      });
+
+    }catch(error){}
+
+  }else{
+
+    try{
+
+      await navigator.clipboard.writeText(url);
+
+      alert("লিংক কপি হয়েছে");
+
+    }catch(error){
+
+      alert("লিংক কপি করা যায়নি");
+
+    }
+  }
+}
+
+
+async function shareCurrentImage(){
+
+  await shareDesign(currentImage);
+}
+
+
+/* Add Comment */
 
 async function addComment(index){
 
-const name =
-document.getElementById(
-"name-" + index
-).value.trim();
+  const nameInput =
+    document.getElementById("name-" + index);
 
-const message =
-document.getElementById(
-"message-" + index
-).value.trim();
+  const messageInput =
+    document.getElementById("message-" + index);
+
+  const name =
+    nameInput.value.trim();
+
+  const message =
+    messageInput.value.trim();
 
 
-if(!name || !message){
+  if(!name){
 
-alert(
-"দয়া করে নাম এবং মন্তব্য লিখুন।"
-);
+    alert("আপনার নাম লিখুন");
 
-return;
+    return;
+  }
+
+
+  if(!message){
+
+    alert("আপনার মন্তব্য লিখুন");
+
+    return;
+  }
+
+
+  const designId = index + 1;
+
+
+  const { error } =
+    await supabaseClient
+      .from("comments")
+      .insert({
+
+        name:name,
+
+        message:message,
+
+        design_id:designId
+
+      });
+
+
+  if(error){
+
+    console.error(error);
+
+    alert(
+      "মন্তব্য পাঠানো যায়নি। আবার চেষ্টা করুন।"
+    );
+
+    return;
+  }
+
+
+  nameInput.value = "";
+
+  messageInput.value = "";
+
+
+  alert("আপনার মন্তব্য সফলভাবে পাঠানো হয়েছে।");
+
+
+  loadComments(index);
+}
+
+
+/* Load Comments */
+
+async function loadComments(index){
+
+  const designId = index + 1;
+
+  const commentsBox =
+    document.getElementById("comments-" + index);
+
+
+  commentsBox.innerHTML =
+    "<p>মন্তব্য লোড হচ্ছে...</p>";
+
+
+  const { data, error } =
+    await supabaseClient
+      .from("comments")
+      .select("id,name,message,created_at")
+      .eq("design_id", designId)
+      .order("created_at", {
+        ascending:false
+      });
+
+
+  if(error){
+
+    console.error(error);
+
+    commentsBox.innerHTML =
+      "<p>মন্তব্য লোড করা যায়নি।</p>";
+
+    return;
+  }
+
+
+  commentsBox.innerHTML = "";
+
+
+  if(!data || data.length === 0){
+
+    commentsBox.innerHTML =
+      "<p>এখনও কোনো মন্তব্য নেই।</p>";
+
+    return;
+  }
+
+
+  data.forEach(comment => {
+
+    const div =
+      document.createElement("div");
+
+    div.className = "comment";
+
+
+    const strong =
+      document.createElement("strong");
+
+    strong.textContent =
+      comment.name;
+
+
+    const text =
+      document.createElement("div");
+
+    text.textContent =
+      comment.message;
+
+
+    div.appendChild(strong);
+
+    div.appendChild(text);
+
+    commentsBox.appendChild(div);
+
+  });
 
 }
 
 
-if(!window.supabaseClient){
-
-alert(
-"সিস্টেম প্রস্তুত হয়নি। একটু পরে আবার চেষ্টা করুন।"
-);
-
-return;
-
-}
-
-
-try{
-
-const {error} =
-await window.supabaseClient
-.from("comments")
-.insert({
-
-id:crypto.randomUUID(),
-
-name:name,
-
-message:message,
-
-design_id:index + 1
-
-});
-
-
-if(error){
-
-console.error(error);
-
-alert(
-"মন্তব্য জমা হয়নি: " +
-error.message
-);
-
-return;
-
-}
-
-
-document.getElementById(
-"name-" + index
-).value = "";
-
-document.getElementById(
-"message-" + index
-).value = "";
-
-
-alert(
-"আপনার মন্তব্য সফলভাবে জমা হয়েছে।"
-);
-
-
-loadComments();
-
-}catch(error){
-
-console.error(error);
-
-alert(
-"একটি সমস্যা হয়েছে। আবার চেষ্টা করুন।"
-);
-
-}
-
-}
-
-
-/* =========================
-   LOAD COMMENTS
-========================= */
-
-async function loadComments(){
-
-if(!window.supabaseClient){
-return;
-}
-
-
-const {data,error} =
-await window.supabaseClient
-.from("comments")
-.select(
-"id,name,message,created_at,design_id"
-)
-.order(
-"created_at",
-{
-ascending:false
-}
-);
-
-
-if(error){
-
-console.error(error);
-
-return;
-
-}
-
+/* Load all comments */
 
 for(let i = 0; i < images.length; i++){
 
-const list =
-document.getElementById(
-"comments-" + i
-);
-
-if(!list){
-continue;
-}
-
-
-list.innerHTML = "";
-
-
-const designComments =
-(data || []).filter(
-function(item){
-
-return Number(item.design_id) === i + 1;
-
-}
-);
-
-
-designComments.forEach(
-function(item){
-
-const div =
-document.createElement("div");
-
-div.className =
-"comment";
-
-
-const name =
-document.createElement("div");
-
-name.className =
-"comment-name";
-
-name.textContent =
-"👤 " + item.name;
-
-
-const message =
-document.createElement("div");
-
-message.className =
-"comment-message";
-
-message.textContent =
-item.message;
-
-
-div.appendChild(name);
-
-div.appendChild(message);
-
-list.appendChild(div);
-
-}
-
-);
-
-}
+  loadComments(i);
 
 }
 
 
-/* =========================
-   OPEN SHARED DESIGN
-========================= */
+/* Keyboard */
 
-function openSharedDesign(){
+document.addEventListener(
+  "keydown",
+  function(event){
 
-const params =
-new URLSearchParams(
-window.location.search
+    const viewer =
+      document.getElementById("viewer");
+
+    if(viewer.style.display !== "flex"){
+      return;
+    }
+
+    if(event.key === "ArrowLeft"){
+      changeImage(-1);
+    }
+
+    if(event.key === "ArrowRight"){
+      changeImage(1);
+    }
+
+    if(event.key === "Escape"){
+      closeViewer();
+    }
+
+  }
 );
 
 
-const design =
-parseInt(
-params.get("design"),
-10
-);
+/* Swipe */
 
+let touchStartX = 0;
 
-if(
-design >= 1 &&
-design <= images.length
-){
-
-const index =
-design - 1;
-
-
-setTimeout(
-function(){
 
 document
-.getElementById(
-"design-" + design
-)
-.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
+  .getElementById("viewer")
+  .addEventListener(
+    "touchstart",
+    function(event){
+
+      touchStartX =
+        event.changedTouches[0].screenX;
+
+    }
+  );
 
 
-setTimeout(
-function(){
+document
+  .getElementById("viewer")
+  .addEventListener(
+    "touchend",
+    function(event){
 
-openImage(index);
+      const touchEndX =
+        event.changedTouches[0].screenX;
 
-},
-400
-);
-
-},
-500
-);
-
-}
-
-}
+      const difference =
+        touchEndX - touchStartX;
 
 
-window.addEventListener(
-"load",
-openSharedDesign
-);
+      if(Math.abs(difference) < 50){
+        return;
+      }
+
+
+      if(difference > 0){
+        changeImage(-1);
+      }else{
+        changeImage(1);
+      }
+
+    }
+  );
 
 </script>
 
