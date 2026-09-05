@@ -3,78 +3,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="B61AE4A9-9817-42AB-BB75-84E24E50C692.png"
-     alt="ওমর এস এস ঘর লোগো"
-     style="width:120px;border-radius:15px;">
-  <title>ওমর এস এস ঘর</title>
+<meta name="theme-color" content="#0f766e">
+
+<title>ওমর এস এস ঘর | SS গেট, গ্রিল ও দরজা</title>
+
+<meta name="description" content="ওমর এস এস ঘর, বিরামপুর, দিনাজপুর। SS গেট, গ্রিল ও দরজার বিভিন্ন ডিজাইন দেখুন এবং মূল্য জানতে যোগাযোগ করুন।">
 
 <style>
-  .gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
+*{
+  box-sizing:border-box;
 }
 
-.gallery img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:12px;
-  box-shadow:0 3px 10px #ccc;
+html{
+  scroll-behavior:smooth;
 }
+
 body{
   margin:0;
-  font-family:Arial,sans-serif;
-  background:#f3f5f7;
-  color:#222;
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#f1f5f9;
+  color:#172033;
 }
+
 header{
-  background:linear-gradient(135deg,#111,#555);
+  background:linear-gradient(135deg,#0f766e,#115e59);
   color:white;
   text-align:center;
-  padding:50px 15px;
+  padding:35px 15px;
 }
-h1{font-size:32px;margin:0 0 10px;}
-header p{font-size:18px;line-height:1.6;}
-section{
-  max-width:900px;
-  margin:auto;
-  padding:30px 15px;
+
+header h1{
+  margin:0 0 8px;
+  font-size:32px;
 }
-h2{text-align:center;margin-bottom:20px;}
-.service,.contact{
+
+header p{
+  margin:0;
+  font-size:17px;
+}
+
+.container{
+  width:min(1000px,calc(100% - 24px));
+  margin:25px auto 50px;
+}
+
+.intro{
   background:white;
-  padding:20px;
-  margin:12px 0;
-  border-radius:12px;
-  box-shadow:0 3px 10px #ddd;
-}
-.service{font-size:17px;}
-.btn{
-  display:inline-block;
-  padding:13px 18px;
-  margin:6px;
-  border-radius:8px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-.call{background:#0d6efd;}
-.whatsapp{background:#198754;}
-.map{background:#dc3545;}
-.number{
-  display:block;
-  color:#0d6efd;
-  font-size:20px;
-  font-weight:bold;
-  text-decoration:none;
-  margin:12px;
-}
-footer{
-  background:#111;
-  color:white;
+  border-radius:18px;
+  padding:22px;
   text-align:center;
-  padding:25px 10px;
+  box-shadow:0 5px 20px #0001;
+  margin-bottom:22px;
+}
+
+.intro h2{
+  margin:0 0 8px;
+}
+
+.intro p{
+  margin:0;
+  color:#64748b;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 5px 20px #0002;
+}
+
+.design-image{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+}
+
+.card-body{
+  padding:17px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:20px;
+}
+
+.info{
+  color:#475569;
+  line-height:1.7;
+  font-size:15px;
+}
+
+.price{
+  margin-top:7px;
+  font-size:19px;
+  font-weight:bold;
+  color:#0f766e;
+}
+
+.buttons{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+.buttons a,
+.buttons button{
+  border:0;
+  border-radius:9px;
+  padding:10px 13px;
+  color:white;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.call{
+  background:#2563eb;
+}
+
+.whatsapp{
+  background:#16a34a;
+}
+
+.share{
+  background:#7c3aed;
+}
+
+.comment-section{
+  margin-top:18px;
+  border-top:1px solid #e2e8f0;
+  padding-top:15px;
+}
+
+.comment-title{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.comment-input,
+.comment-text{
+  width:100%;
+  padding:11px;
+  border:1px solid #cbd5e1;
+  border-radius:9px;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.comment-text{
+  min-height:70px;
+  resize:vertical;
+}
+
+.comment-submit{
+  width:100%;
+  border:0;
+  background:#0f766e;
+  color:white;
+  padding:11px;
+  border-radius:9px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.comments-list{
+  margin-top:13px;
+}
+
+.comment{
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:11px;
+  margin-bottom:8px;
+}
+
+.comment-name{
+  font-weight:bold;
+  margin-bottom:4px;
+}
+
+.comment-message{
+  color:#334155;
+  white-space:pre-wrap;
+}
+
+.contact{
+  margin-top:25px;
+  background:#0f172a;
+  color:white;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+}
+
+.contact h2{
+  margin-top:0;
+}
+
+.contact p{
+  line-height:1.8;
+}
+
+.contact a{
+  color:white;
+  text-decoration:none;
+}
+
+.viewer{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:#000f;
+  align-items:center;
+  justify-content:center;
+}
+
+.viewer img{
+  max-width:94%;
+  max-height:82vh;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.close,
+.prev,
+.next{
+  position:absolute;
+  color:white;
+  cursor:pointer;
+  user-select:none;
+}
+
+.close{
+  top:10px;
+  right:20px;
+  font-size:42px;
+}
+
+.prev,
+.next{
+  top:50%;
+  transform:translateY(-50%);
+  font-size:55px;
+  padding:15px;
+}
+
+.prev{
+  left:5px;
+}
+
+.next{
+  right:5px;
+}
+
+.viewer-title{
+  position:absolute;
+  bottom:20px;
+  color:white;
+  background:#0009;
+  padding:8px 14px;
+  border-radius:8px;
+}
+
+@media(max-width:700px){
+
+  header h1{
+    font-size:26px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .design-image{
+    height:280px;
+  }
 }
 </style>
 </head>
@@ -82,120 +296,968 @@ footer{
 <body>
 
 <header>
-<h1>🏪 ওমর এস এস ঘর</h1>
-<p>SS • গ্লাস • থাই অ্যালুমিনিয়াম — মানসম্মত কাজ, বিশ্বস্ত সেবা</p>
-
-
-
-<a class="btn call" href="tel:01816845577">📞 কল করুন</a>
-
-<a class="btn whatsapp"pr
-href="https://wa.me/8801816845577"
-target="_blank">🟢 WhatsApp</a>
+  <h1>🏪 ওমর এস এস ঘর</h1>
+  <p>SS গেট • SS গ্রিল • SS দরজা</p>
 </header>
 
-<section>
-<h2>🔧 আমাদের সেবাসমূহ</h2>
-<p style="text-align:center;">
-আমাদের অভিজ্ঞ টিমের মাধ্যমে SS, গ্লাস ও থাই অ্যালুমিনিয়ামের কাজ করা হয়।
-</p>
-<div class="service">
-<a href="ss-gate.html" style="text-decoration:none;color:#222;">
-🔹 SS গেট, গ্রিল ও দরজা
-</a>
-</div>
-  <div class="service">
-<a href="ss-railing.html" style="text-decoration:none;color:#222;">
-🔹 SS রেলিং ও সিঁড়ির হ্যান্ডরেল
-</a>
-</div>
-<div class="service">
-<a href="balcony-railing.html" style="text-decoration:none;color:#222;">
-🔹 বারান্দার রেলিং
-</a>
-</div>
-<div class="service">
-<a href="glass-work.html" style="text-decoration:none;color:#222;">
-🔹 গ্লাস রেলিং ও পার্টিশন
-</a>
-</div>
-<div class="service">
-<a href="ss-pipe.html" style="text-decoration:none;color:#222;">
-🔹 SS পাইপ ও বিভিন্ন ফিটিংস
-</a>
-</div>
-<div class="service">
-<a href="ss-glass-design.html" style="text-decoration:none;color:#222;">
-🔹 বিভিন্ন ডিজাইনের SS ও গ্লাসের কাজ
-</a>
-</div>
-<div class="service">
-<a href="thai-aluminium.html" style="text-decoration:none;color:#222;">
-🔹 থাই অ্যালুমিনিয়ামের বিভিন্ন কাজ
-</a>
-</div>
+<main class="container">
+
+<section class="intro">
+  <h2>✨ আমাদের SS ডিজাইন</h2>
+  <p>
+    পছন্দের ডিজাইন দেখুন, বড় করে ছবি দেখুন,
+    শেয়ার করুন এবং ডিজাইনের নিচে মন্তব্য করুন।
+  </p>
 </section>
 
-<section>
-<h2>📍 আমাদের ঠিকানা</h2>
+<section class="gallery">
 
-<div class="contact">
-<p>কলেজ বাজার পেট্রোল পাম্পের সামনে</p>
-<p>বিরামপুর, দিনাজপুর, বাংলাদেশ</p>
+<!-- DESIGN 1 -->
 
-<a class="btn map"
-href="https://maps.app.goo.gl/vstxfMmEMnQnYHvb8?g_st=ic"
-target="_blank">
-📍 Google Maps-এ লোকেশন দেখুন
-</a>
+<div class="card" id="design-1">
+
+<img
+  class="design-image"
+  src="20221123_152953_Original.jpeg"
+  alt="SS গেট ডিজাইন ১"
+  onclick="openImage(0)"
+>
+
+<div class="card-body">
+
+<h3>SS গেট ডিজাইন ১</h3>
+
+<div class="info">
+📏 সাইজ: ৬ × ৭ ফুট
 </div>
+
+<div class="price">
+💰 মূল্য: ২৫,০০০ টাকা থেকে
+</div>
+
+<div class="buttons">
+
+<a class="call" href="tel:01341241433">
+📞 কল
+</a>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/8801816845577"
+  target="_blank"
+  rel="noopener"
+>
+💬 WhatsApp
+</a>
+
+<button class="share" onclick="shareDesign(0)">
+🔗 Share
+</button>
+
+</div>
+
+<div class="comment-section">
+
+<div class="comment-title">
+💬 এই ডিজাইন সম্পর্কে মন্তব্য
+</div>
+
+<input
+  class="comment-input"
+  id="name-0"
+  type="text"
+  placeholder="আপনার নাম"
+>
+
+<textarea
+  class="comment-text"
+  id="message-0"
+  placeholder="আপনার মন্তব্য লিখুন"
+></textarea>
+
+<button
+  class="comment-submit"
+  onclick="addComment(0)"
+>
+মন্তব্য করুন
+</button>
+
+<div
+  class="comments-list"
+  id="comments-0"
+></div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- DESIGN 2 -->
+
+<div class="card" id="design-2">
+
+<img
+  class="design-image"
+  src="20230311_213007_Original.jpeg"
+  alt="SS গেট ডিজাইন ২"
+  onclick="openImage(1)"
+>
+
+<div class="card-body">
+
+<h3>SS গেট ডিজাইন ২</h3>
+
+<div class="info">
+📏 সাইজ: ৬ × ৭ ফুট
+</div>
+
+<div class="price">
+💰 মূল্য: ২৫,০০০ টাকা থেকে
+</div>
+
+<div class="buttons">
+
+<a class="call" href="tel:01341241433">
+📞 কল
+</a>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/8801816845577"
+  target="_blank"
+  rel="noopener"
+>
+💬 WhatsApp
+</a>
+
+<button class="share" onclick="shareDesign(1)">
+🔗 Share
+</button>
+
+</div>
+
+<div class="comment-section">
+
+<div class="comment-title">
+💬 এই ডিজাইন সম্পর্কে মন্তব্য
+</div>
+
+<input
+  class="comment-input"
+  id="name-1"
+  type="text"
+  placeholder="আপনার নাম"
+>
+
+<textarea
+  class="comment-text"
+  id="message-1"
+  placeholder="আপনার মন্তব্য লিখুন"
+></textarea>
+
+<button
+  class="comment-submit"
+  onclick="addComment(1)"
+>
+মন্তব্য করুন
+</button>
+
+<div
+  class="comments-list"
+  id="comments-1"
+></div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- DESIGN 3 -->
+
+<div class="card" id="design-3">
+
+<img
+  class="design-image"
+  src="B61AE4A9-9817-42AB-BB75-84E24E50C692.png"
+  alt="SS গেট ডিজাইন ৩"
+  onclick="openImage(2)"
+>
+
+<div class="card-body">
+
+<h3>SS গেট ডিজাইন ৩</h3>
+
+<div class="info">
+📏 সাইজ: ৬ × ৭ ফুট
+</div>
+
+<div class="price">
+💰 মূল্য: ২৫,০০০ টাকা থেকে
+</div>
+
+<div class="buttons">
+
+<a class="call" href="tel:01341241433">
+📞 কল
+</a>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/8801816845577"
+  target="_blank"
+  rel="noopener"
+>
+💬 WhatsApp
+</a>
+
+<button class="share" onclick="shareDesign(2)">
+🔗 Share
+</button>
+
+</div>
+
+<div class="comment-section">
+
+<div class="comment-title">
+💬 এই ডিজাইন সম্পর্কে মন্তব্য
+</div>
+
+<input
+  class="comment-input"
+  id="name-2"
+  type="text"
+  placeholder="আপনার নাম"
+>
+
+<textarea
+  class="comment-text"
+  id="message-2"
+  placeholder="আপনার মন্তব্য লিখুন"
+></textarea>
+
+<button
+  class="comment-submit"
+  onclick="addComment(2)"
+>
+মন্তব্য করুন
+</button>
+
+<div
+  class="comments-list"
+  id="comments-2"
+></div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- DESIGN 4 -->
+
+<div class="card" id="design-4">
+
+<img
+  class="design-image"
+  src="IMG-20230201-WA0001_Original.jpeg"
+  alt="SS গেট ডিজাইন ৪"
+  onclick="openImage(3)"
+>
+
+<div class="card-body">
+
+<h3>SS গেট ডিজাইন ৪</h3>
+
+<div class="info">
+📏 সাইজ: ৬ × ৭ ফুট
+</div>
+
+<div class="price">
+💰 মূল্য: ২৫,০০০ টাকা থেকে
+</div>
+
+<div class="buttons">
+
+<a class="call" href="tel:01341241433">
+📞 কল
+</a>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/8801816845577"
+  target="_blank"
+  rel="noopener"
+>
+💬 WhatsApp
+</a>
+
+<button class="share" onclick="shareDesign(3)">
+🔗 Share
+</button>
+
+</div>
+
+<div class="comment-section">
+
+<div class="comment-title">
+💬 এই ডিজাইন সম্পর্কে মন্তব্য
+</div>
+
+<input
+  class="comment-input"
+  id="name-3"
+  type="text"
+  placeholder="আপনার নাম"
+>
+
+<textarea
+  class="comment-text"
+  id="message-3"
+  placeholder="আপনার মন্তব্য লিখুন"
+></textarea>
+
+<button
+  class="comment-submit"
+  onclick="addComment(3)"
+>
+মন্তব্য করুন
+</button>
+
+<div
+  class="comments-list"
+  id="comments-3"
+></div>
+
+</div>
+
+</div>
+</div>
+
 </section>
 
-<section id="ss-gate">
-  <h2>🚪 SS গেট, গ্রিল ও দরজা</h2>
 
-  <div class="gallery">
-    <img src="https://via.placeholder.com/400x300?text=SS+Gate+1" alt="SS গেট">
-    <img src="https://via.placeholder.com/400x300?text=SS+Gate+2" alt="SS গেট">
-    <img src="https://via.placeholder.com/400x300?text=SS+Gate+3" alt="SS গেট">
-    <img src="https://via.placeholder.com/400x300?text=SS+Gate+4" alt="SS গেট">
-  </div>
-</section>
+<section class="contact">
 
-  
-</section>
 <h2>📞 যোগাযোগ করুন</h2>
-<section>
+
+<p>
+🏪 ওমর এস এস ঘর<br>
+কলেজ বাজার পেট্রোল পাম্পের সামনে,<br>
+বিরামপুর, দিনাজপুর।
+</p>
+
+<p>
+
+📞
+<a href="tel:01341241433">
+01341241433
+</a>
+
+<br>
+
+💬 WhatsApp:
+<a
+  href="https://wa.me/8801816845577"
+  target="_blank"
+  rel="noopener"
+>
+01816845577
+</a>
+
+<br>
+
+✉️
+<a href="mailto:omorssghor@gmail.com">
+omorssghor@gmail.com
+</a>
+
+</p>
 
 </section>
-<div class="contact">
 
-<a class="number" href="tel:01816845577">
-01816-845577
-</a>
+</main>
 
-<a class="number" href="tel:01341241433">
-01341-241433
-</a>
 
-<a class="btn call" href="tel:01816845577">
-📞 এখনই কল করুন
-</a>
+<!-- IMAGE VIEWER -->
 
-<a class="btn whatsapp"
-href="https://wa.me/8801816845577"
-target="_blank">
-🟢 WhatsApp করুন
-</a>
+<div
+  class="viewer"
+  id="viewer"
+  onclick="closeViewer(event)"
+>
+
+<span
+  class="close"
+  onclick="closeViewer(event)"
+>
+×
+</span>
+
+<span
+  class="prev"
+  onclick="event.stopPropagation(); changeImage(-1)"
+>
+‹
+</span>
+
+<img
+  id="viewerImage"
+  src=""
+  alt=""
+>
+
+<span
+  class="next"
+  onclick="event.stopPropagation(); changeImage(1)"
+>
+›
+</span>
+
+<div
+  class="viewer-title"
+  id="viewerTitle"
+></div>
 
 </div>
-</section>
 
-<footer>
-© 2026 ওমর এস এস ঘর
-<br>
-SS, গ্লাস ও থাই অ্যালুমিনিয়ামের বিশ্বস্ত প্রতিষ্ঠান
-</footer>
+
+<script>
+
+"use strict";
+
+
+/* =========================
+   IMAGES
+========================= */
+
+const images = [
+
+{
+  src:"20221123_152953_Original.jpeg",
+  title:"SS গেট ডিজাইন ১"
+},
+
+{
+  src:"20230311_213007_Original.jpeg",
+  title:"SS গেট ডিজাইন ২"
+},
+
+{
+  src:"B61AE4A9-9817-42AB-BB75-84E24E50C692.png",
+  title:"SS গেট ডিজাইন ৩"
+},
+
+{
+  src:"IMG-20230201-WA0001_Original.jpeg",
+  title:"SS গেট ডিজাইন ৪"
+}
+
+];
+
+
+let currentImage = 0;
+let startX = 0;
+
+
+/* =========================
+   IMAGE VIEWER
+========================= */
+
+function openImage(index){
+
+currentImage = index;
+
+document.getElementById("viewerImage").src =
+images[currentImage].src;
+
+document.getElementById("viewerImage").alt =
+images[currentImage].title;
+
+document.getElementById("viewerTitle").textContent =
+images[currentImage].title;
+
+document.getElementById("viewer").style.display =
+"flex";
+
+}
+
+
+function closeViewer(event){
+
+if(
+!event ||
+event.target.id === "viewer" ||
+event.target.classList.contains("close")
+){
+
+document.getElementById("viewer").style.display =
+"none";
+
+}
+
+}
+
+
+function changeImage(direction){
+
+currentImage += direction;
+
+if(currentImage < 0){
+currentImage = images.length - 1;
+}
+
+if(currentImage >= images.length){
+currentImage = 0;
+}
+
+openImage(currentImage);
+
+}
+
+
+/* =========================
+   KEYBOARD IMAGE CONTROL
+========================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+const viewer =
+document.getElementById("viewer");
+
+if(viewer.style.display !== "flex"){
+return;
+}
+
+if(event.key === "ArrowLeft"){
+changeImage(-1);
+}
+
+if(event.key === "ArrowRight"){
+changeImage(1);
+}
+
+if(event.key === "Escape"){
+viewer.style.display = "none";
+}
+
+}
+);
+
+
+/* =========================
+   SWIPE
+========================= */
+
+const viewer =
+document.getElementById("viewer");
+
+viewer.addEventListener(
+"touchstart",
+function(event){
+
+startX =
+event.touches[0].clientX;
+
+},
+{passive:true}
+);
+
+
+viewer.addEventListener(
+"touchend",
+function(event){
+
+const endX =
+event.changedTouches[0].clientX;
+
+const difference =
+endX - startX;
+
+if(Math.abs(difference) > 50){
+
+if(difference < 0){
+changeImage(1);
+}else{
+changeImage(-1);
+}
+
+}
+
+},
+{passive:true}
+);
+
+
+/* =========================
+   SHARE DESIGN
+========================= */
+
+async function shareDesign(index){
+
+const url =
+window.location.origin +
+window.location.pathname +
+"?design=" +
+(index + 1);
+
+const text =
+"ওমর এস এস ঘর-এর " +
+images[index].title +
+" দেখুন।";
+
+if(navigator.share){
+
+try{
+
+await navigator.share({
+title:images[index].title,
+text:text,
+url:url
+});
+
+}catch(error){
+
+}
+
+}else{
+
+try{
+
+await navigator.clipboard.writeText(url);
+
+alert(
+"এই ডিজাইনের লিংক কপি হয়েছে। এখন Facebook বা WhatsApp-এ শেয়ার করুন।"
+);
+
+}catch(error){
+
+alert(
+"লিংক কপি করা যায়নি।"
+);
+
+}
+
+}
+
+}
+
+
+/* =========================
+   SUPABASE
+========================= */
+
+const SUPABASE_URL =
+"https://gzujcqjpxypcoiqhpvvu.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF";
+
+
+const script =
+document.createElement("script");
+
+script.src =
+"https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+
+
+script.onload = function(){
+
+window.supabaseClient =
+window.supabase.createClient(
+SUPABASE_URL,
+SUPABASE_KEY
+);
+
+loadComments();
+
+};
+
+
+script.onerror = function(){
+
+console.error(
+"Supabase library load failed."
+);
+
+};
+
+
+document.head.appendChild(script);
+
+
+/* =========================
+   ADD COMMENT
+========================= */
+
+async function addComment(index){
+
+const name =
+document.getElementById(
+"name-" + index
+).value.trim();
+
+const message =
+document.getElementById(
+"message-" + index
+).value.trim();
+
+
+if(!name || !message){
+
+alert(
+"দয়া করে নাম এবং মন্তব্য লিখুন।"
+);
+
+return;
+
+}
+
+
+if(!window.supabaseClient){
+
+alert(
+"সিস্টেম প্রস্তুত হয়নি। একটু পরে আবার চেষ্টা করুন।"
+);
+
+return;
+
+}
+
+
+try{
+
+const {error} =
+await window.supabaseClient
+.from("comments")
+.insert({
+
+id:crypto.randomUUID(),
+
+name:name,
+
+message:message,
+
+design_id:index + 1
+
+});
+
+
+if(error){
+
+console.error(error);
+
+alert(
+"মন্তব্য জমা হয়নি: " +
+error.message
+);
+
+return;
+
+}
+
+
+document.getElementById(
+"name-" + index
+).value = "";
+
+document.getElementById(
+"message-" + index
+).value = "";
+
+
+alert(
+"আপনার মন্তব্য সফলভাবে জমা হয়েছে।"
+);
+
+
+loadComments();
+
+}catch(error){
+
+console.error(error);
+
+alert(
+"একটি সমস্যা হয়েছে। আবার চেষ্টা করুন।"
+);
+
+}
+
+}
+
+
+/* =========================
+   LOAD COMMENTS
+========================= */
+
+async function loadComments(){
+
+if(!window.supabaseClient){
+return;
+}
+
+
+const {data,error} =
+await window.supabaseClient
+.from("comments")
+.select(
+"id,name,message,created_at,design_id"
+)
+.order(
+"created_at",
+{
+ascending:false
+}
+);
+
+
+if(error){
+
+console.error(error);
+
+return;
+
+}
+
+
+for(let i = 0; i < images.length; i++){
+
+const list =
+document.getElementById(
+"comments-" + i
+);
+
+if(!list){
+continue;
+}
+
+
+list.innerHTML = "";
+
+
+const designComments =
+(data || []).filter(
+function(item){
+
+return Number(item.design_id) === i + 1;
+
+}
+);
+
+
+designComments.forEach(
+function(item){
+
+const div =
+document.createElement("div");
+
+div.className =
+"comment";
+
+
+const name =
+document.createElement("div");
+
+name.className =
+"comment-name";
+
+name.textContent =
+"👤 " + item.name;
+
+
+const message =
+document.createElement("div");
+
+message.className =
+"comment-message";
+
+message.textContent =
+item.message;
+
+
+div.appendChild(name);
+
+div.appendChild(message);
+
+list.appendChild(div);
+
+}
+
+);
+
+}
+
+}
+
+
+/* =========================
+   OPEN SHARED DESIGN
+========================= */
+
+function openSharedDesign(){
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+
+const design =
+parseInt(
+params.get("design"),
+10
+);
+
+
+if(
+design >= 1 &&
+design <= images.length
+){
+
+const index =
+design - 1;
+
+
+setTimeout(
+function(){
+
+document
+.getElementById(
+"design-" + design
+)
+.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+
+setTimeout(
+function(){
+
+openImage(index);
+
+},
+400
+);
+
+},
+500
+);
+
+}
+
+}
+
+
+window.addEventListener(
+"load",
+openSharedDesign
+);
+
+</script>
 
 </body>
 </html>
