@@ -1,748 +1,335 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ওমর এস এস ঘর</title>
+  <title>ওমর এস এস ঘর | SS ও গ্লাসের কাজ</title>
 
-<style>
-*{
-  box-sizing:border-box;
-}
+  <meta name="description" content="ওমর এস এস ঘর — SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান। কলেজ বাজার পেট্রোল পাম্পের সামনে, বিরামপুর, দিনাজপুর।">
 
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f5f5f5;
-  color:#222;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+    }
 
-header{
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:20px 10px;
-}
+    body {
+      background: #f5f6f8;
+      color: #222;
+      line-height: 1.7;
+    }
 
-header h1{
-  margin:0 0 8px;
-  font-size:28px;
-}
+    header {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
 
-header p{
-  margin:0;
-  font-size:15px;
-}
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:15px;
-}
+    header p {
+      font-size: 17px;
+      color: #d1d5db;
+    }
 
-.design{
-  background:white;
-  margin-bottom:25px;
-  padding:12px;
-  border-radius:12px;
-  box-shadow:0 2px 8px rgba(0,0,0,.12);
-}
+    .buttons {
+      margin-top: 22px;
+    }
 
-.design img{
-  width:100%;
-  max-height:500px;
-  object-fit:contain;
-  border-radius:10px;
-  cursor:pointer;
-  background:#eee;
-}
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-.buttons{
-  display:flex;
-  gap:8px;
-  margin-top:10px;
-}
+    .call {
+      background: #2563eb;
+    }
 
-.buttons button{
-  flex:1;
-  padding:11px 5px;
-  border:0;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:14px;
-}
+    .whatsapp {
+      background: #16a34a;
+    }
 
-.view-btn{
-  background:#222;
-  color:white;
-}
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 45px 18px;
+    }
 
-.share-btn{
-  background:#eee;
-}
+    section h2 {
+      text-align: center;
+      font-size: 27px;
+      margin-bottom: 25px;
+      color: #111827;
+    }
 
-.comment-box{
-  margin-top:15px;
-}
+    .intro {
+      text-align: center;
+      font-size: 18px;
+    }
 
-.comment-box input,
-.comment-box textarea{
-  width:100%;
-  padding:10px;
-  margin-top:7px;
-  border:1px solid #ccc;
-  border-radius:7px;
-  font-size:15px;
-}
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
 
-.comment-box textarea{
-  height:80px;
-  resize:none;
-}
+    .service {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      font-size: 17px;
+    }
 
-.comment-box button{
-  margin-top:8px;
-  padding:10px 18px;
-  border:0;
-  border-radius:7px;
-  background:#111;
-  color:white;
-  cursor:pointer;
-}
+    .about {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+    }
 
-.comments{
-  margin-top:15px;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
 
-.comment{
-  background:#f1f1f1;
-  padding:10px;
-  margin-top:8px;
-  border-radius:8px;
-}
+    .gallery div {
+      background: #e5e7eb;
+      min-height: 180px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+    }
 
-.comment strong{
-  display:block;
-  margin-bottom:4px;
-}
+    .contact {
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      padding: 30px 15px;
+    }
 
-.contact{
-  text-align:center;
-  padding:25px 10px;
-  background:#111;
-  color:white;
-}
+    .contact p {
+      margin: 10px 0;
+      font-size: 17px;
+    }
 
-.contact a{
-  display:inline-block;
-  margin:6px;
-  padding:11px 18px;
-  border-radius:8px;
-  color:white;
-  text-decoration:none;
-  background:#198754;
-}
+    .map-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 22px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-.contact .call{
-  background:#0d6efd;
-}
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 20px;
+    }
 
-/* Image Viewer */
-.viewer{
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.95);
-  align-items:center;
-  justify-content:center;
-}
-
-.viewer img{
-  max-width:90%;
-  max-height:85%;
-  object-fit:contain;
-}
-
-.close{
-  position:absolute;
-  top:15px;
-  right:20px;
-  color:white;
-  font-size:38px;
-  cursor:pointer;
-}
-
-.prev,
-.next{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  color:white;
-  font-size:45px;
-  cursor:pointer;
-  padding:10px;
-  user-select:none;
-}
-
-.prev{
-  left:5px;
-}
-
-.next{
-  right:5px;
-}
-
-.viewer-share{
-  position:absolute;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  background:white;
-  color:#111;
-  border:0;
-  padding:10px 20px;
-  border-radius:8px;
-  font-size:16px;
-}
-</style>
+    footer p {
+      margin: 5px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>ওমর এস এস ঘর</h1>
-  <p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
-</header>
+  <!-- Header -->
+  <header>
+    <h1>🏪 ওমর এস এস ঘর</h1>
 
-<div class="container">
-
-  <!-- Design 1 -->
-  <div class="design">
-    <img
-      src="20221123_152953_Original.jpeg"
-      alt="SS Design 1"
-      onclick="openImage(0)"
-    >
+    <p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
 
     <div class="buttons">
-      <button class="view-btn" onclick="openImage(0)">ছবি বড় করে দেখুন</button>
-      <button class="share-btn" onclick="shareDesign(0)">শেয়ার</button>
+      <a class="btn call" href="tel:01341241433">
+        📞 কল করুন
+      </a>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/8801816845577"
+         target="_blank">
+        💬 WhatsApp করুন
+      </a>
     </div>
+  </header>
 
-    <div class="comment-box">
-      <h3>মন্তব্য করুন</h3>
 
-      <input
-        type="text"
-        id="name-0"
-        placeholder="আপনার নাম"
-      >
+  <!-- Introduction -->
+  <section>
+    <h2>আমাদের সম্পর্কে</h2>
 
-      <textarea
-        id="message-0"
-        placeholder="আপনার মন্তব্য লিখুন"
-      ></textarea>
+    <p class="intro">
+      আপনার প্রয়োজন অনুযায়ী SS ও গ্লাসের বিভিন্ন ধরনের কাজ
+      তৈরি ও স্থাপন করা হয়। মানসম্মত কাজ, সুন্দর ডিজাইন এবং
+      গ্রাহকের সন্তুষ্টিই আমাদের লক্ষ্য।
+    </p>
+  </section>
 
-      <button onclick="addComment(0)">মন্তব্য পাঠান</button>
 
-      <div class="comments" id="comments-0"></div>
+  <!-- Services -->
+  <section>
+    <h2>🔧 আমাদের সেবাসমূহ</h2>
+
+    <div class="services">
+
+      <div class="service">SS গেট</div>
+
+      <div class="service">SS গ্রিল</div>
+
+      <div class="service">SS দরজা</div>
+
+      <div class="service">SS রেলিং</div>
+
+      <div class="service">সিঁড়ির হ্যান্ডরেল</div>
+
+      <div class="service">বারান্দার রেলিং</div>
+
+      <div class="service">গ্লাস রেলিং</div>
+
+      <div class="service">গ্লাস পার্টিশন</div>
+
+      <div class="service">SS পাইপ ও ফিটিংস</div>
+
+      <div class="service">অন্যান্য SS ও গ্লাসের কাজ</div>
+
     </div>
-  </div>
+  </section>
 
 
-  <!-- Design 2 -->
-  <div class="design">
-    <img
-      src="20230311_213007_Original.jpeg"
-      alt="SS Design 2"
-      onclick="openImage(1)"
-    >
+  <!-- Gallery -->
+  <section>
+    <h2>🖼️ আমাদের কাজ</h2>
 
-    <div class="buttons">
-      <button class="view-btn" onclick="openImage(1)">ছবি বড় করে দেখুন</button>
-      <button class="share-btn" onclick="shareDesign(1)">শেয়ার</button>
+    <div class="gallery">
+
+      <div>আপনার কাজের ছবি এখানে থাকবে</div>
+
+      <div>আপনার কাজের ছবি এখানে থাকবে</div>
+
+      <div>আপনার কাজের ছবি এখানে থাকবে</div>
+
+      <div>আপনার কাজের ছবি এখানে থাকবে</div>
+
     </div>
+  </section>
 
-    <div class="comment-box">
-      <h3>মন্তব্য করুন</h3>
 
-      <input
-        type="text"
-        id="name-1"
-        placeholder="আপনার নাম"
-      >
+  <!-- About -->
+  <section>
+    <h2>⭐ কেন আমাদের বেছে নেবেন?</h2>
 
-      <textarea
-        id="message-1"
-        placeholder="আপনার মন্তব্য লিখুন"
-      ></textarea>
+    <div class="about">
 
-      <button onclick="addComment(1)">মন্তব্য পাঠান</button>
+      <p>
+        ✔️ সুন্দর ও আধুনিক ডিজাইন
+      </p>
 
-      <div class="comments" id="comments-1"></div>
+      <p>
+        ✔️ মানসম্মত কাজ
+      </p>
+
+      <p>
+        ✔️ গ্রাহকের প্রয়োজন অনুযায়ী কাজ
+      </p>
+
+      <p>
+        ✔️ যত্নসহকারে তৈরি ও স্থাপন
+      </p>
+
+      <p>
+        ✔️ গ্রাহকের সন্তুষ্টিকে গুরুত্ব দেওয়া হয়
+      </p>
+
     </div>
-  </div>
+  </section>
 
 
-  <!-- Design 3 -->
-  <div class="design">
-    <img
-      src="B61AE4A9-9817-42AB-BB75-84E24E50C692.png"
-      alt="SS Design 3"
-      onclick="openImage(2)"
-    >
+  <!-- Address -->
+  <section>
+    <h2>📍 আমাদের ঠিকানা</h2>
 
-    <div class="buttons">
-      <button class="view-btn" onclick="openImage(2)">ছবি বড় করে দেখুন</button>
-      <button class="share-btn" onclick="shareDesign(2)">শেয়ার</button>
+    <div class="contact">
+
+      <p>
+        কলেজ বাজার পেট্রোল পাম্পের সামনে
+      </p>
+
+      <p>
+        বিরামপুর, দিনাজপুর, বাংলাদেশ
+      </p>
+
+      <a class="map-btn"
+         href="https://maps.google.com/?q=College+Bazar,+Birampur,+Dinajpur"
+         target="_blank">
+        📍 Google Maps-এ লোকেশন দেখুন
+      </a>
+
     </div>
+  </section>
 
-    <div class="comment-box">
-      <h3>মন্তব্য করুন</h3>
 
-      <input
-        type="text"
-        id="name-2"
-        placeholder="আপনার নাম"
-      >
+  <!-- Contact -->
+  <section>
+    <h2>📞 যোগাযোগ করুন</h2>
 
-      <textarea
-        id="message-2"
-        placeholder="আপনার মন্তব্য লিখুন"
-      ></textarea>
+    <div class="contact">
 
-      <button onclick="addComment(2)">মন্তব্য পাঠান</button>
+      <p>📱 ফোন: 01341241433</p>
 
-      <div class="comments" id="comments-2"></div>
+      <p>💬 WhatsApp: 01816845577</p>
+
+      <p>✉️ Email: omorssghor@gmail.com</p>
+
+      <div class="buttons">
+
+        <a class="btn call" href="tel:01341241433">
+          📞 এখনই কল করুন
+        </a>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/8801816845577"
+           target="_blank">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
     </div>
-  </div>
+  </section>
 
 
-  <!-- Design 4 -->
-  <div class="design">
-    <img
-      src="IMG-20230201-WA0001_Original.jpeg"
-      alt="SS Design 4"
-      onclick="openImage(3)"
-    >
+  <!-- Footer -->
+  <footer>
 
-    <div class="buttons">
-      <button class="view-btn" onclick="openImage(3)">ছবি বড় করে দেখুন</button>
-      <button class="share-btn" onclick="shareDesign(3)">শেয়ার</button>
-    </div>
+    <p>🏪 ওমর এস এস ঘর</p>
 
-    <div class="comment-box">
-      <h3>মন্তব্য করুন</h3>
+    <p>SS ও গ্লাসের কাজের বিশ্বস্ত ঠিকানা</p>
 
-      <input
-        type="text"
-        id="name-3"
-        placeholder="আপনার নাম"
-      >
+    <p>© 2026 ওমর এস এস ঘর — সর্বস্বত্ব সংরক্ষিত</p>
 
-      <textarea
-        id="message-3"
-        placeholder="আপনার মন্তব্য লিখুন"
-      ></textarea>
-
-      <button onclick="addComment(3)">মন্তব্য পাঠান</button>
-
-      <div class="comments" id="comments-3"></div>
-    </div>
-  </div>
-
-</div>
-
-
-<div class="contact">
-  <h2>যোগাযোগ করুন</h2>
-
-  <a
-    href="https://wa.me/8801816845577"
-    target="_blank"
-  >
-    WhatsApp
-  </a>
-
-  <a
-    class="call"
-    href="tel:01341241433"
-  >
-    কল করুন
-  </a>
-
-  <p>কলেজ বাজার পেট্রোল পাম্পের সামনে, বিরামপুর, দিনাজপুর</p>
-</div>
-
-
-<!-- Image Viewer -->
-
-<div class="viewer" id="viewer">
-
-  <span class="close" onclick="closeViewer()">×</span>
-
-  <span class="prev" onclick="changeImage(-1)">‹</span>
-
-  <img id="viewerImage" src="" alt="Design">
-
-  <span class="next" onclick="changeImage(1)">›</span>
-
-  <button class="viewer-share" onclick="shareCurrentImage()">
-    শেয়ার
-  </button>
-
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-
-const SUPABASE_URL =
-"https://gzujcqjpxypcoiqhpvvu.supabase.co";
-
-const SUPABASE_KEY =
-"sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF";
-
-const supabaseClient =
-window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-
-
-const images = [
-  "20221123_152953_Original.jpeg",
-  "20230311_213007_Original.jpeg",
-  "B61AE4A9-9817-42AB-BB75-84E24E50C692.png",
-  "IMG-20230201-WA0001_Original.jpeg"
-];
-
-let currentImage = 0;
-
-
-function openImage(index){
-
-  currentImage = index;
-
-  document.getElementById("viewerImage").src =
-    images[index];
-
-  document.getElementById("viewer").style.display =
-    "flex";
-}
-
-
-function closeViewer(){
-
-  document.getElementById("viewer").style.display =
-    "none";
-}
-
-
-function changeImage(direction){
-
-  currentImage += direction;
-
-  if(currentImage < 0){
-    currentImage = images.length - 1;
-  }
-
-  if(currentImage >= images.length){
-    currentImage = 0;
-  }
-
-  document.getElementById("viewerImage").src =
-    images[currentImage];
-}
-
-
-async function shareDesign(index){
-
-  const text =
-    "ওমর এস এস ঘর - SS ও গ্লাসের কাজ";
-
-  const url =
-    window.location.href + "#design-" + (index + 1);
-
-  if(navigator.share){
-
-    try{
-
-      await navigator.share({
-        title:"ওমর এস এস ঘর",
-        text:text,
-        url:url
-      });
-
-    }catch(error){}
-
-  }else{
-
-    try{
-
-      await navigator.clipboard.writeText(url);
-
-      alert("লিংক কপি হয়েছে");
-
-    }catch(error){
-
-      alert("লিংক কপি করা যায়নি");
-
-    }
-  }
-}
-
-
-async function shareCurrentImage(){
-
-  await shareDesign(currentImage);
-}
-
-
-/* Add Comment */
-
-async function addComment(index){
-
-  const nameInput =
-    document.getElementById("name-" + index);
-
-  const messageInput =
-    document.getElementById("message-" + index);
-
-  const name =
-    nameInput.value.trim();
-
-  const message =
-    messageInput.value.trim();
-
-
-  if(!name){
-
-    alert("আপনার নাম লিখুন");
-
-    return;
-  }
-
-
-  if(!message){
-
-    alert("আপনার মন্তব্য লিখুন");
-
-    return;
-  }
-
-
-  const designId = index + 1;
-
-
-  const { error } =
-    await supabaseClient
-      .from("comments")
-      .insert({
-
-        name:name,
-
-        message:message,
-
-        design_id:designId
-
-      });
-
-
-  if(error){
-
-    console.error(error);
-
-    alert(
-      "মন্তব্য পাঠানো যায়নি। আবার চেষ্টা করুন।"
-    );
-
-    return;
-  }
-
-
-  nameInput.value = "";
-
-  messageInput.value = "";
-
-
-  alert("আপনার মন্তব্য সফলভাবে পাঠানো হয়েছে।");
-
-
-  loadComments(index);
-}
-
-
-/* Load Comments */
-
-async function loadComments(index){
-
-  const designId = index + 1;
-
-  const commentsBox =
-    document.getElementById("comments-" + index);
-
-
-  commentsBox.innerHTML =
-    "<p>মন্তব্য লোড হচ্ছে...</p>";
-
-
-  const { data, error } =
-    await supabaseClient
-      .from("comments")
-      .select("id,name,message,created_at")
-      .eq("design_id", designId)
-      .order("created_at", {
-        ascending:false
-      });
-
-
-  if(error){
-
-    console.error(error);
-
-    commentsBox.innerHTML =
-      "<p>মন্তব্য লোড করা যায়নি।</p>";
-
-    return;
-  }
-
-
-  commentsBox.innerHTML = "";
-
-
-  if(!data || data.length === 0){
-
-    commentsBox.innerHTML =
-      "<p>এখনও কোনো মন্তব্য নেই।</p>";
-
-    return;
-  }
-
-
-  data.forEach(comment => {
-
-    const div =
-      document.createElement("div");
-
-    div.className = "comment";
-
-
-    const strong =
-      document.createElement("strong");
-
-    strong.textContent =
-      comment.name;
-
-
-    const text =
-      document.createElement("div");
-
-    text.textContent =
-      comment.message;
-
-
-    div.appendChild(strong);
-
-    div.appendChild(text);
-
-    commentsBox.appendChild(div);
-
-  });
-
-}
-
-
-/* Load all comments */
-
-for(let i = 0; i < images.length; i++){
-
-  loadComments(i);
-
-}
-
-
-/* Keyboard */
-
-document.addEventListener(
-  "keydown",
-  function(event){
-
-    const viewer =
-      document.getElementById("viewer");
-
-    if(viewer.style.display !== "flex"){
-      return;
-    }
-
-    if(event.key === "ArrowLeft"){
-      changeImage(-1);
-    }
-
-    if(event.key === "ArrowRight"){
-      changeImage(1);
-    }
-
-    if(event.key === "Escape"){
-      closeViewer();
-    }
-
-  }
-);
-
-
-/* Swipe */
-
-let touchStartX = 0;
-
-
-document
-  .getElementById("viewer")
-  .addEventListener(
-    "touchstart",
-    function(event){
-
-      touchStartX =
-        event.changedTouches[0].screenX;
-
-    }
-  );
-
-
-document
-  .getElementById("viewer")
-  .addEventListener(
-    "touchend",
-    function(event){
-
-      const touchEndX =
-        event.changedTouches[0].screenX;
-
-      const difference =
-        touchEndX - touchStartX;
-
-
-      if(Math.abs(difference) < 50){
-        return;
-      }
-
-
-      if(difference > 0){
-        changeImage(-1);
-      }else{
-        changeImage(1);
-      }
-
-    }
-  );
-
-</script>
+  </footer>
 
 </body>
 </html>
