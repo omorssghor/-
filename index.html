@@ -9,9 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -24,7 +22,7 @@ header{
   background:#111;
   color:white;
   text-align:center;
-  padding:25px 15px;
+  padding:28px 15px;
 }
 
 header h1{
@@ -58,9 +56,7 @@ section{
   border-radius:12px;
 }
 
-h2{
-  text-align:center;
-}
+h2{text-align:center}
 
 .services{
   display:grid;
@@ -141,19 +137,57 @@ h2{
   background:#f5f5f5;
   padding:10px;
   border-radius:7px;
-  margin-top:8px;
+  margin-top:10px;
 }
 
 .comment strong{
   display:block;
+  margin-bottom:4px;
+}
+
+.comment-actions{
+  margin-top:8px;
+}
+
+.reply-btn{
+  border:0;
+  background:none;
+  color:#1877f2;
+  cursor:pointer;
+  padding:3px;
+}
+
+.reply-box{
+  display:none;
+  margin-top:8px;
+}
+
+.reply-box input{
+  width:100%;
+  padding:8px;
+  margin-bottom:6px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.reply-box button{
+  padding:7px 12px;
+  border:0;
+  border-radius:5px;
+  background:#1877f2;
+  color:white;
+}
+
+.replies{
+  margin-left:20px;
 }
 
 .reply{
-  margin-left:25px;
-  margin-top:7px;
-  padding:8px;
-  background:#fff;
+  background:white;
   border-left:3px solid #ccc;
+  padding:8px;
+  margin-top:7px;
+  border-radius:5px;
 }
 
 footer{
@@ -169,190 +203,285 @@ footer{
 <body>
 
 <header>
-  <h1>🏪 ওমর এস এস ঘর</h1>
-  <p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
+<h1>🏪 ওমর এস এস ঘর</h1>
 
-  <a class="btn phone" href="tel:01341241433">📞 ফোন করুন</a>
-  <a class="btn" href="https://wa.me/8801816845577">💬 WhatsApp</a>
+<p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
+
+<a class="btn phone" href="tel:01341241433">
+📞 ফোন করুন
+</a>
+
+<a class="btn" href="https://wa.me/8801816845577">
+💬 WhatsApp
+</a>
 </header>
 
-<section>
-  <h2>আমাদের সম্পর্কে</h2>
-
-  <p>
-    ওমর এস এস ঘর-এ SS ও গ্লাসের বিভিন্ন ধরনের কাজ যত্নসহকারে করা হয়।
-    আপনার প্রয়োজন অনুযায়ী মজবুত ও সুন্দর ডিজাইনের কাজের জন্য আমাদের সঙ্গে যোগাযোগ করুন।
-  </p>
-</section>
 
 <section>
-  <h2>আমাদের সার্ভিস</h2>
 
-  <div class="services">
+<h2>আমাদের সম্পর্কে</h2>
 
-    <div class="service">SS গেট</div>
-    <div class="service">SS গ্রিল</div>
-    <div class="service">SS দরজা</div>
-    <div class="service">SS রেলিং</div>
-    <div class="service">সিঁড়ির হ্যান্ডরেল</div>
-    <div class="service">বারান্দার রেলিং</div>
-    <div class="service">গ্লাস রেলিং</div>
-    <div class="service">গ্লাস পার্টিশন</div>
-    <div class="service">SS পাইপ ও ফিটিংস</div>
-    <div class="service">অন্যান্য SS ও গ্লাসের কাজ</div>
+<p>
+ওমর এস এস ঘর-এ SS ও গ্লাসের বিভিন্ন ধরনের কাজ যত্নসহকারে করা হয়।
+আপনার প্রয়োজন অনুযায়ী মজবুত ও সুন্দর ডিজাইনের কাজের জন্য আমাদের সঙ্গে যোগাযোগ করুন।
+</p>
 
-  </div>
 </section>
+
 
 <section>
-  <h2>আমাদের কাজ</h2>
 
-  <div class="gallery">
+<h2>আমাদের সার্ভিস</h2>
 
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        এখানে ছবি যোগ করুন
-      </div>
+<div class="services">
 
-      <div class="photo-content">
-        <h3>SS গেট</h3>
+<div class="service">SS গেট</div>
+<div class="service">SS গ্রিল</div>
+<div class="service">SS দরজা</div>
+<div class="service">SS রেলিং</div>
+<div class="service">সিঁড়ির হ্যান্ডরেল</div>
+<div class="service">বারান্দার রেলিং</div>
+<div class="service">গ্লাস রেলিং</div>
+<div class="service">গ্লাস পার্টিশন</div>
+<div class="service">SS পাইপ ও ফিটিংস</div>
+<div class="service">অন্যান্য SS ও গ্লাসের কাজ</div>
 
-        <div class="actions">
-          <button onclick="likePhoto(1)">❤️ Like <span id="like1">0</span></button>
+</div>
 
-          <button onclick="sharePhoto('SS গেট')">
-            📤 Share
-          </button>
-        </div>
-
-        <div class="comment-box">
-          <input id="name1" placeholder="আপনার নাম">
-          <input id="comment1" placeholder="আপনার মন্তব্য লিখুন">
-          <button onclick="addComment(1)">মন্তব্য করুন</button>
-        </div>
-
-        <div id="comments1"></div>
-      </div>
-    </div>
-
-
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        এখানে ছবি যোগ করুন
-      </div>
-
-      <div class="photo-content">
-        <h3>SS রেলিং</h3>
-
-        <div class="actions">
-          <button onclick="likePhoto(2)">❤️ Like <span id="like2">0</span></button>
-
-          <button onclick="sharePhoto('SS রেলিং')">
-            📤 Share
-          </button>
-        </div>
-
-        <div class="comment-box">
-          <input id="name2" placeholder="আপনার নাম">
-          <input id="comment2" placeholder="আপনার মন্তব্য লিখুন">
-          <button onclick="addComment(2)">মন্তব্য করুন</button>
-        </div>
-
-        <div id="comments2"></div>
-      </div>
-    </div>
-
-
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        এখানে ছবি যোগ করুন
-      </div>
-
-      <div class="photo-content">
-        <h3>গ্লাস রেলিং</h3>
-
-        <div class="actions">
-          <button onclick="likePhoto(3)">❤️ Like <span id="like3">0</span></button>
-
-          <button onclick="sharePhoto('গ্লাস রেলিং')">
-            📤 Share
-          </button>
-        </div>
-
-        <div class="comment-box">
-          <input id="name3" placeholder="আপনার নাম">
-          <input id="comment3" placeholder="আপনার মন্তব্য লিখুন">
-          <button onclick="addComment(3)">মন্তব্য করুন</button>
-        </div>
-
-        <div id="comments3"></div>
-      </div>
-    </div>
-
-
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        এখানে ছবি যোগ করুন
-      </div>
-
-      <div class="photo-content">
-        <h3>গ্লাস পার্টিশন</h3>
-
-        <div class="actions">
-          <button onclick="likePhoto(4)">❤️ Like <span id="like4">0</span></button>
-
-          <button onclick="sharePhoto('গ্লাস পার্টিশন')">
-            📤 Share
-          </button>
-        </div>
-
-        <div class="comment-box">
-          <input id="name4" placeholder="আপনার নাম">
-          <input id="comment4" placeholder="আপনার মন্তব্য লিখুন">
-          <button onclick="addComment(4)">মন্তব্য করুন</button>
-        </div>
-
-        <div id="comments4"></div>
-      </div>
-    </div>
-
-  </div>
 </section>
+
 
 <section>
-  <h2>কেন আমাদের বেছে নেবেন?</h2>
 
-  <ul>
-    <li>✅ সুন্দর ও মানসম্মত কাজ</li>
-    <li>✅ প্রয়োজন অনুযায়ী ডিজাইন</li>
-    <li>✅ SS ও গ্লাসের বিভিন্ন কাজ</li>
-    <li>✅ যত্নসহকারে কাজ সম্পন্ন</li>
-    <li>✅ সরাসরি যোগাযোগের সুবিধা</li>
-  </ul>
+<h2>আমাদের কাজ</h2>
+
+<div class="gallery">
+
+
+<!-- PHOTO 1 -->
+
+<div class="photo-card">
+
+<div class="photo-placeholder">
+এখানে ছবি যোগ করুন
+</div>
+
+<div class="photo-content">
+
+<h3>SS গেট</h3>
+
+<div class="actions">
+
+<button onclick="likePhoto(1)">
+❤️ Like <span id="like1">0</span>
+</button>
+
+<button onclick="sharePhoto('SS গেট')">
+📤 Share
+</button>
+
+</div>
+
+<div class="comment-box">
+
+<input id="name1" placeholder="আপনার নাম">
+
+<input id="comment1" placeholder="আপনার মন্তব্য লিখুন">
+
+<button onclick="addComment(1)">
+মন্তব্য করুন
+</button>
+
+</div>
+
+<div id="comments1"></div>
+
+</div>
+</div>
+
+
+<!-- PHOTO 2 -->
+
+<div class="photo-card">
+
+<div class="photo-placeholder">
+এখানে ছবি যোগ করুন
+</div>
+
+<div class="photo-content">
+
+<h3>SS রেলিং</h3>
+
+<div class="actions">
+
+<button onclick="likePhoto(2)">
+❤️ Like <span id="like2">0</span>
+</button>
+
+<button onclick="sharePhoto('SS রেলিং')">
+📤 Share
+</button>
+
+</div>
+
+<div class="comment-box">
+
+<input id="name2" placeholder="আপনার নাম">
+
+<input id="comment2" placeholder="আপনার মন্তব্য লিখুন">
+
+<button onclick="addComment(2)">
+মন্তব্য করুন
+</button>
+
+</div>
+
+<div id="comments2"></div>
+
+</div>
+</div>
+
+
+<!-- PHOTO 3 -->
+
+<div class="photo-card">
+
+<div class="photo-placeholder">
+এখানে ছবি যোগ করুন
+</div>
+
+<div class="photo-content">
+
+<h3>গ্লাস রেলিং</h3>
+
+<div class="actions">
+
+<button onclick="likePhoto(3)">
+❤️ Like <span id="like3">0</span>
+</button>
+
+<button onclick="sharePhoto('গ্লাস রেলিং')">
+📤 Share
+</button>
+
+</div>
+
+<div class="comment-box">
+
+<input id="name3" placeholder="আপনার নাম">
+
+<input id="comment3" placeholder="আপনার মন্তব্য লিখুন">
+
+<button onclick="addComment(3)">
+মন্তব্য করুন
+</button>
+
+</div>
+
+<div id="comments3"></div>
+
+</div>
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div class="photo-card">
+
+<div class="photo-placeholder">
+এখানে ছবি যোগ করুন
+</div>
+
+<div class="photo-content">
+
+<h3>গ্লাস পার্টিশন</h3>
+
+<div class="actions">
+
+<button onclick="likePhoto(4)">
+❤️ Like <span id="like4">0</span>
+</button>
+
+<button onclick="sharePhoto('গ্লাস পার্টিশন')">
+📤 Share
+</button>
+
+</div>
+
+<div class="comment-box">
+
+<input id="name4" placeholder="আপনার নাম">
+
+<input id="comment4" placeholder="আপনার মন্তব্য লিখুন">
+
+<button onclick="addComment(4)">
+মন্তব্য করুন
+</button>
+
+</div>
+
+<div id="comments4"></div>
+
+</div>
+</div>
+
+
+</div>
+
 </section>
+
 
 <section>
-  <h2>যোগাযোগ</h2>
 
-  <p>📍 College Bazar Petrol Pump-এর সামনে, Birampur, Dinajpur, Bangladesh</p>
+<h2>কেন আমাদের বেছে নেবেন?</h2>
 
-  <p>📞 01341241433</p>
+<ul>
 
-  <p>💬 WhatsApp: 01816845577</p>
+<li>✅ সুন্দর ও মানসম্মত কাজ</li>
 
-  <p>📧 omorssghor@gmail.com</p>
+<li>✅ প্রয়োজন অনুযায়ী ডিজাইন</li>
 
-  <a class="btn phone" href="tel:01341241433">
-    এখনই ফোন করুন
-  </a>
+<li>✅ SS ও গ্লাসের বিভিন্ন কাজ</li>
 
-  <a class="btn" href="https://wa.me/8801816845577">
-    WhatsApp করুন
-  </a>
+<li>✅ যত্নসহকারে কাজ সম্পন্ন</li>
+
+<li>✅ সরাসরি যোগাযোগের সুবিধা</li>
+
+</ul>
+
 </section>
+
+
+<section>
+
+<h2>যোগাযোগ</h2>
+
+<p>
+📍 College Bazar Petrol Pump-এর সামনে,
+Birampur, Dinajpur, Bangladesh
+</p>
+
+<p>📞 01341241433</p>
+
+<p>💬 WhatsApp: 01816845577</p>
+
+<p>📧 omorssghor@gmail.com</p>
+
+<a class="btn phone" href="tel:01341241433">
+এখনই ফোন করুন
+</a>
+
+<a class="btn" href="https://wa.me/8801816845577">
+WhatsApp করুন
+</a>
+
+</section>
+
 
 <footer>
-  © 2026 ওমর এস এস ঘর — সর্বস্বত্ব সংরক্ষিত
+
+© 2026 ওমর এস এস ঘর — সর্বস্বত্ব সংরক্ষিত
+
 </footer>
 
 
@@ -365,22 +494,29 @@ const SUPABASE_KEY =
 "sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF";
 
 const supabaseClient =
-supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+supabase.createClient(
+SUPABASE_URL,
+SUPABASE_KEY
+);
 
 
 /* LIKE */
 
 function likePhoto(id){
 
-  let key = "photo_like_" + id;
+let key="photo_like_"+id;
 
-  let count = Number(localStorage.getItem(key) || 0);
+let count=
+Number(localStorage.getItem(key)||0);
 
-  count++;
+count++;
 
-  localStorage.setItem(key,count);
+localStorage.setItem(key,count);
 
-  document.getElementById("like"+id).innerText=count;
+document.getElementById(
+"like"+id
+).innerText=count;
+
 }
 
 
@@ -388,65 +524,187 @@ function likePhoto(id){
 
 function sharePhoto(title){
 
-  const text =
-  "ওমর এস এস ঘর - " + title;
+const text=
+"ওমর এস এস ঘর - "+title;
 
-  if(navigator.share){
+if(navigator.share){
 
-    navigator.share({
-      title:"ওমর এস এস ঘর",
-      text:text,
-      url:window.location.href
-    });
+navigator.share({
 
-  }else{
+title:"ওমর এস এস ঘর",
 
-    alert("এই ফোনে Share অপশন পাওয়া যায়নি।");
+text:text,
 
-  }
+url:window.location.href
+
+});
+
+}else{
+
+navigator.clipboard.writeText(
+window.location.href
+);
+
+alert(
+"ওয়েবসাইটের লিংক কপি হয়েছে।"
+);
+
+}
+
 }
 
 
-/* COMMENT */
+/* ADD COMMENT */
 
 async function addComment(photoId){
 
-  const name =
-  document.getElementById("name"+photoId).value.trim();
+const name=
+document.getElementById(
+"name"+photoId
+).value.trim();
 
-  const comment =
-  document.getElementById("comment"+photoId).value.trim();
+const comment=
+document.getElementById(
+"comment"+photoId
+).value.trim();
 
-  if(!name || !comment){
 
-    alert("নাম এবং মন্তব্য লিখুন।");
-    return;
+if(!name || !comment){
 
-  }
+alert(
+"নাম এবং মন্তব্য লিখুন।"
+);
 
-  const {error} =
-  await supabaseClient
-  .from("comments")
-  .insert({
-    design_id:photoId,
-    Name:name,
-    comment:comment
-  });
+return;
 
-  if(error){
+}
 
-    console.log(error);
 
-    alert("মন্তব্য পাঠানো যায়নি।");
+const {error}=
+await supabaseClient
+.from("comments")
+.insert({
 
-    return;
+design_id:photoId,
 
-  }
+Name:name,
 
-  document.getElementById("name"+photoId).value="";
-  document.getElementById("comment"+photoId).value="";
+comment:comment,
 
-  loadComments(photoId);
+parent_id:null
+
+});
+
+
+if(error){
+
+console.log(error);
+
+alert(
+"মন্তব্য পাঠানো যায়নি।"
+);
+
+return;
+
+}
+
+
+document.getElementById(
+"name"+photoId
+).value="";
+
+document.getElementById(
+"comment"+photoId
+).value="";
+
+
+loadComments(photoId);
+
+}
+
+
+/* REPLY */
+
+async function addReply(
+photoId,
+parentId
+){
+
+const name=
+document.getElementById(
+"replyName"+parentId
+).value.trim();
+
+const reply=
+document.getElementById(
+"replyText"+parentId
+).value.trim();
+
+
+if(!name || !reply){
+
+alert(
+"নাম এবং Reply লিখুন।"
+);
+
+return;
+
+}
+
+
+const {error}=
+await supabaseClient
+.from("comments")
+.insert({
+
+design_id:photoId,
+
+Name:name,
+
+comment:reply,
+
+parent_id:parentId
+
+});
+
+
+if(error){
+
+console.log(error);
+
+alert(
+"Reply পাঠানো যায়নি।"
+);
+
+return;
+
+}
+
+
+loadComments(photoId);
+
+}
+
+
+/* SHOW REPLY BOX */
+
+function showReply(id){
+
+const box=
+document.getElementById(
+"replyBox"+id
+);
+
+if(box.style.display==="block"){
+
+box.style.display="none";
+
+}else{
+
+box.style.display="block";
+
+}
+
 }
 
 
@@ -454,40 +712,152 @@ async function addComment(photoId){
 
 async function loadComments(photoId){
 
-  const {data,error} =
-  await supabaseClient
-  .from("comments")
-  .select("*")
-  .eq("design_id",photoId)
-  .order("created_at",{ascending:true});
+const {data,error}=
+await supabaseClient
+.from("comments")
+.select("*")
+.eq("design_id",photoId)
+.order("created_at",{ascending:true});
 
-  if(error){
 
-    console.log(error);
-    return;
+if(error){
 
-  }
+console.log(error);
 
-  const box =
-  document.getElementById("comments"+photoId);
+return;
 
-  box.innerHTML="";
+}
 
-  data.forEach(item=>{
 
-    const div =
-    document.createElement("div");
+const box=
+document.getElementById(
+"comments"+photoId
+);
 
-    div.className="comment";
+box.innerHTML="";
 
-    div.innerHTML=`
-      <strong>${escapeHTML(item.Name || "অতিথি")}</strong>
-      <span>${escapeHTML(item.comment || "")}</span>
-    `;
 
-    box.appendChild(div);
+const comments=
+data.filter(
+item=>!item.parent_id
+);
 
-  });
+
+comments.forEach(item=>{
+
+const div=
+document.createElement("div");
+
+div.className="comment";
+
+
+div.innerHTML=`
+
+<strong>
+${escapeHTML(
+item.Name || "অতিথি"
+)}
+</strong>
+
+<div>
+${escapeHTML(
+item.comment || ""
+)}
+</div>
+
+<div class="comment-actions">
+
+<button
+class="reply-btn"
+onclick="showReply('${item.id}')">
+
+↩️ Reply
+
+</button>
+
+</div>
+
+
+<div
+class="reply-box"
+id="replyBox${item.id}"
+>
+
+<input
+id="replyName${item.id}"
+placeholder="আপনার নাম"
+>
+
+<input
+id="replyText${item.id}"
+placeholder="আপনার Reply"
+>
+
+<button
+onclick="addReply(
+${photoId},
+'${item.id}'
+)">
+
+Reply পাঠান
+
+</button>
+
+</div>
+
+
+<div
+class="replies"
+id="replies${item.id}"
+></div>
+
+`;
+
+
+box.appendChild(div);
+
+
+const replies=
+data.filter(
+reply=>reply.parent_id===item.id
+);
+
+
+const replyBox=
+document.getElementById(
+"replies"+item.id
+);
+
+
+replies.forEach(reply=>{
+
+const r=
+document.createElement("div");
+
+r.className="reply";
+
+r.innerHTML=`
+
+<strong>
+${escapeHTML(
+reply.Name || "অতিথি"
+)}
+</strong>
+
+<div>
+${escapeHTML(
+reply.comment || ""
+)}
+</div>
+
+`;
+
+replyBox.appendChild(r);
+
+});
+
+});
+
 }
 
 
@@ -495,19 +865,24 @@ async function loadComments(photoId){
 
 function escapeHTML(text){
 
-  const div=document.createElement("div");
+const div=
+document.createElement("div");
 
-  div.textContent=text;
+div.textContent=text;
 
-  return div.innerHTML;
+return div.innerHTML;
+
 }
 
 
-/* LOAD */
+/* START */
 
 loadComments(1);
+
 loadComments(2);
+
 loadComments(3);
+
 loadComments(4);
 
 </script>
