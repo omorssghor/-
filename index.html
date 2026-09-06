@@ -1,335 +1,516 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ওমর এস এস ঘর | SS ও গ্লাসের কাজ</title>
+<title>ওমর এস এস ঘর</title>
 
-  <meta name="description" content="ওমর এস এস ঘর — SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান। কলেজ বাজার পেট্রোল পাম্পের সামনে, বিরামপুর, দিনাজপুর।">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, "Noto Sans Bengali", sans-serif;
-    }
+<style>
+*{
+  box-sizing:border-box;
+}
 
-    body {
-      background: #f5f6f8;
-      color: #222;
-      line-height: 1.7;
-    }
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#f4f6f8;
+  color:#222;
+}
 
-    header {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 35px 15px;
-    }
+header{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
 
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+header h1{
+  margin:0;
+  font-size:30px;
+}
 
-    header p {
-      font-size: 17px;
-      color: #d1d5db;
-    }
+header p{
+  margin:8px 0 15px;
+}
 
-    .buttons {
-      margin-top: 22px;
-    }
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  margin:5px;
+  border-radius:7px;
+  text-decoration:none;
+  color:white;
+  background:#198754;
+}
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      padding: 12px 20px;
-      margin: 5px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.phone{
+  background:#0d6efd;
+}
 
-    .call {
-      background: #2563eb;
-    }
+section{
+  max-width:900px;
+  margin:20px auto;
+  padding:20px;
+  background:white;
+  border-radius:12px;
+}
 
-    .whatsapp {
-      background: #16a34a;
-    }
+h2{
+  text-align:center;
+}
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 45px 18px;
-    }
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+}
 
-    section h2 {
-      text-align: center;
-      font-size: 27px;
-      margin-bottom: 25px;
-      color: #111827;
-    }
+.service{
+  background:#f1f3f5;
+  padding:15px;
+  border-radius:8px;
+  text-align:center;
+}
 
-    .intro {
-      text-align: center;
-      font-size: 18px;
-    }
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
+.photo-card{
+  border:1px solid #ddd;
+  border-radius:10px;
+  overflow:hidden;
+  background:white;
+}
 
-    .service {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      font-size: 17px;
-    }
+.photo-placeholder{
+  height:200px;
+  background:#e9ecef;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#777;
+  font-size:18px;
+}
 
-    .about {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-    }
+.photo-content{
+  padding:15px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
+.actions{
+  display:flex;
+  gap:8px;
+  margin:10px 0;
+}
 
-    .gallery div {
-      background: #e5e7eb;
-      min-height: 180px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #6b7280;
-    }
+.actions button{
+  flex:1;
+  border:1px solid #ddd;
+  background:white;
+  padding:9px;
+  border-radius:6px;
+  cursor:pointer;
+}
 
-    .contact {
-      background: white;
-      border-radius: 12px;
-      text-align: center;
-      padding: 30px 15px;
-    }
+.comment-box{
+  margin-top:12px;
+}
 
-    .contact p {
-      margin: 10px 0;
-      font-size: 17px;
-    }
+.comment-box input{
+  width:100%;
+  padding:10px;
+  margin-bottom:8px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
 
-    .map-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 22px;
-      background: #111827;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.comment-box button{
+  padding:9px 15px;
+  border:0;
+  border-radius:6px;
+  background:#111;
+  color:white;
+}
 
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 20px;
-    }
+.comment{
+  background:#f5f5f5;
+  padding:10px;
+  border-radius:7px;
+  margin-top:8px;
+}
 
-    footer p {
-      margin: 5px;
-    }
-  </style>
+.comment strong{
+  display:block;
+}
+
+.reply{
+  margin-left:25px;
+  margin-top:7px;
+  padding:8px;
+  background:#fff;
+  border-left:3px solid #ccc;
+}
+
+footer{
+  text-align:center;
+  background:#111;
+  color:white;
+  padding:25px;
+  margin-top:30px;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>🏪 ওমর এস এস ঘর</h1>
+<header>
+  <h1>🏪 ওমর এস এস ঘর</h1>
+  <p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
 
-    <p>SS ও গ্লাসের সকল ধরনের কাজের বিশ্বস্ত প্রতিষ্ঠান</p>
+  <a class="btn phone" href="tel:01341241433">📞 ফোন করুন</a>
+  <a class="btn" href="https://wa.me/8801816845577">💬 WhatsApp</a>
+</header>
 
-    <div class="buttons">
-      <a class="btn call" href="tel:01341241433">
-        📞 কল করুন
-      </a>
+<section>
+  <h2>আমাদের সম্পর্কে</h2>
 
-      <a class="btn whatsapp"
-         href="https://wa.me/8801816845577"
-         target="_blank">
-        💬 WhatsApp করুন
-      </a>
-    </div>
-  </header>
+  <p>
+    ওমর এস এস ঘর-এ SS ও গ্লাসের বিভিন্ন ধরনের কাজ যত্নসহকারে করা হয়।
+    আপনার প্রয়োজন অনুযায়ী মজবুত ও সুন্দর ডিজাইনের কাজের জন্য আমাদের সঙ্গে যোগাযোগ করুন।
+  </p>
+</section>
 
+<section>
+  <h2>আমাদের সার্ভিস</h2>
 
-  <!-- Introduction -->
-  <section>
-    <h2>আমাদের সম্পর্কে</h2>
+  <div class="services">
 
-    <p class="intro">
-      আপনার প্রয়োজন অনুযায়ী SS ও গ্লাসের বিভিন্ন ধরনের কাজ
-      তৈরি ও স্থাপন করা হয়। মানসম্মত কাজ, সুন্দর ডিজাইন এবং
-      গ্রাহকের সন্তুষ্টিই আমাদের লক্ষ্য।
-    </p>
-  </section>
+    <div class="service">SS গেট</div>
+    <div class="service">SS গ্রিল</div>
+    <div class="service">SS দরজা</div>
+    <div class="service">SS রেলিং</div>
+    <div class="service">সিঁড়ির হ্যান্ডরেল</div>
+    <div class="service">বারান্দার রেলিং</div>
+    <div class="service">গ্লাস রেলিং</div>
+    <div class="service">গ্লাস পার্টিশন</div>
+    <div class="service">SS পাইপ ও ফিটিংস</div>
+    <div class="service">অন্যান্য SS ও গ্লাসের কাজ</div>
 
+  </div>
+</section>
 
-  <!-- Services -->
-  <section>
-    <h2>🔧 আমাদের সেবাসমূহ</h2>
+<section>
+  <h2>আমাদের কাজ</h2>
 
-    <div class="services">
+  <div class="gallery">
 
-      <div class="service">SS গেট</div>
-
-      <div class="service">SS গ্রিল</div>
-
-      <div class="service">SS দরজা</div>
-
-      <div class="service">SS রেলিং</div>
-
-      <div class="service">সিঁড়ির হ্যান্ডরেল</div>
-
-      <div class="service">বারান্দার রেলিং</div>
-
-      <div class="service">গ্লাস রেলিং</div>
-
-      <div class="service">গ্লাস পার্টিশন</div>
-
-      <div class="service">SS পাইপ ও ফিটিংস</div>
-
-      <div class="service">অন্যান্য SS ও গ্লাসের কাজ</div>
-
-    </div>
-  </section>
-
-
-  <!-- Gallery -->
-  <section>
-    <h2>🖼️ আমাদের কাজ</h2>
-
-    <div class="gallery">
-
-      <div>আপনার কাজের ছবি এখানে থাকবে</div>
-
-      <div>আপনার কাজের ছবি এখানে থাকবে</div>
-
-      <div>আপনার কাজের ছবি এখানে থাকবে</div>
-
-      <div>আপনার কাজের ছবি এখানে থাকবে</div>
-
-    </div>
-  </section>
-
-
-  <!-- About -->
-  <section>
-    <h2>⭐ কেন আমাদের বেছে নেবেন?</h2>
-
-    <div class="about">
-
-      <p>
-        ✔️ সুন্দর ও আধুনিক ডিজাইন
-      </p>
-
-      <p>
-        ✔️ মানসম্মত কাজ
-      </p>
-
-      <p>
-        ✔️ গ্রাহকের প্রয়োজন অনুযায়ী কাজ
-      </p>
-
-      <p>
-        ✔️ যত্নসহকারে তৈরি ও স্থাপন
-      </p>
-
-      <p>
-        ✔️ গ্রাহকের সন্তুষ্টিকে গুরুত্ব দেওয়া হয়
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- Address -->
-  <section>
-    <h2>📍 আমাদের ঠিকানা</h2>
-
-    <div class="contact">
-
-      <p>
-        কলেজ বাজার পেট্রোল পাম্পের সামনে
-      </p>
-
-      <p>
-        বিরামপুর, দিনাজপুর, বাংলাদেশ
-      </p>
-
-      <a class="map-btn"
-         href="https://maps.google.com/?q=College+Bazar,+Birampur,+Dinajpur"
-         target="_blank">
-        📍 Google Maps-এ লোকেশন দেখুন
-      </a>
-
-    </div>
-  </section>
-
-
-  <!-- Contact -->
-  <section>
-    <h2>📞 যোগাযোগ করুন</h2>
-
-    <div class="contact">
-
-      <p>📱 ফোন: 01341241433</p>
-
-      <p>💬 WhatsApp: 01816845577</p>
-
-      <p>✉️ Email: omorssghor@gmail.com</p>
-
-      <div class="buttons">
-
-        <a class="btn call" href="tel:01341241433">
-          📞 এখনই কল করুন
-        </a>
-
-        <a class="btn whatsapp"
-           href="https://wa.me/8801816845577"
-           target="_blank">
-          💬 WhatsApp
-        </a>
-
+    <div class="photo-card">
+      <div class="photo-placeholder">
+        এখানে ছবি যোগ করুন
       </div>
 
+      <div class="photo-content">
+        <h3>SS গেট</h3>
+
+        <div class="actions">
+          <button onclick="likePhoto(1)">❤️ Like <span id="like1">0</span></button>
+
+          <button onclick="sharePhoto('SS গেট')">
+            📤 Share
+          </button>
+        </div>
+
+        <div class="comment-box">
+          <input id="name1" placeholder="আপনার নাম">
+          <input id="comment1" placeholder="আপনার মন্তব্য লিখুন">
+          <button onclick="addComment(1)">মন্তব্য করুন</button>
+        </div>
+
+        <div id="comments1"></div>
+      </div>
     </div>
-  </section>
 
 
-  <!-- Footer -->
-  <footer>
+    <div class="photo-card">
+      <div class="photo-placeholder">
+        এখানে ছবি যোগ করুন
+      </div>
 
-    <p>🏪 ওমর এস এস ঘর</p>
+      <div class="photo-content">
+        <h3>SS রেলিং</h3>
 
-    <p>SS ও গ্লাসের কাজের বিশ্বস্ত ঠিকানা</p>
+        <div class="actions">
+          <button onclick="likePhoto(2)">❤️ Like <span id="like2">0</span></button>
 
-    <p>© 2026 ওমর এস এস ঘর — সর্বস্বত্ব সংরক্ষিত</p>
+          <button onclick="sharePhoto('SS রেলিং')">
+            📤 Share
+          </button>
+        </div>
 
-  </footer>
+        <div class="comment-box">
+          <input id="name2" placeholder="আপনার নাম">
+          <input id="comment2" placeholder="আপনার মন্তব্য লিখুন">
+          <button onclick="addComment(2)">মন্তব্য করুন</button>
+        </div>
+
+        <div id="comments2"></div>
+      </div>
+    </div>
+
+
+    <div class="photo-card">
+      <div class="photo-placeholder">
+        এখানে ছবি যোগ করুন
+      </div>
+
+      <div class="photo-content">
+        <h3>গ্লাস রেলিং</h3>
+
+        <div class="actions">
+          <button onclick="likePhoto(3)">❤️ Like <span id="like3">0</span></button>
+
+          <button onclick="sharePhoto('গ্লাস রেলিং')">
+            📤 Share
+          </button>
+        </div>
+
+        <div class="comment-box">
+          <input id="name3" placeholder="আপনার নাম">
+          <input id="comment3" placeholder="আপনার মন্তব্য লিখুন">
+          <button onclick="addComment(3)">মন্তব্য করুন</button>
+        </div>
+
+        <div id="comments3"></div>
+      </div>
+    </div>
+
+
+    <div class="photo-card">
+      <div class="photo-placeholder">
+        এখানে ছবি যোগ করুন
+      </div>
+
+      <div class="photo-content">
+        <h3>গ্লাস পার্টিশন</h3>
+
+        <div class="actions">
+          <button onclick="likePhoto(4)">❤️ Like <span id="like4">0</span></button>
+
+          <button onclick="sharePhoto('গ্লাস পার্টিশন')">
+            📤 Share
+          </button>
+        </div>
+
+        <div class="comment-box">
+          <input id="name4" placeholder="আপনার নাম">
+          <input id="comment4" placeholder="আপনার মন্তব্য লিখুন">
+          <button onclick="addComment(4)">মন্তব্য করুন</button>
+        </div>
+
+        <div id="comments4"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>কেন আমাদের বেছে নেবেন?</h2>
+
+  <ul>
+    <li>✅ সুন্দর ও মানসম্মত কাজ</li>
+    <li>✅ প্রয়োজন অনুযায়ী ডিজাইন</li>
+    <li>✅ SS ও গ্লাসের বিভিন্ন কাজ</li>
+    <li>✅ যত্নসহকারে কাজ সম্পন্ন</li>
+    <li>✅ সরাসরি যোগাযোগের সুবিধা</li>
+  </ul>
+</section>
+
+<section>
+  <h2>যোগাযোগ</h2>
+
+  <p>📍 College Bazar Petrol Pump-এর সামনে, Birampur, Dinajpur, Bangladesh</p>
+
+  <p>📞 01341241433</p>
+
+  <p>💬 WhatsApp: 01816845577</p>
+
+  <p>📧 omorssghor@gmail.com</p>
+
+  <a class="btn phone" href="tel:01341241433">
+    এখনই ফোন করুন
+  </a>
+
+  <a class="btn" href="https://wa.me/8801816845577">
+    WhatsApp করুন
+  </a>
+</section>
+
+<footer>
+  © 2026 ওমর এস এস ঘর — সর্বস্বত্ব সংরক্ষিত
+</footer>
+
+
+<script>
+
+const SUPABASE_URL =
+"https://gzujcqjpxypcoiqhpvvu.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_3A5P427eZte1-uOzytOYSA_4bviRFcF";
+
+const supabaseClient =
+supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+
+/* LIKE */
+
+function likePhoto(id){
+
+  let key = "photo_like_" + id;
+
+  let count = Number(localStorage.getItem(key) || 0);
+
+  count++;
+
+  localStorage.setItem(key,count);
+
+  document.getElementById("like"+id).innerText=count;
+}
+
+
+/* SHARE */
+
+function sharePhoto(title){
+
+  const text =
+  "ওমর এস এস ঘর - " + title;
+
+  if(navigator.share){
+
+    navigator.share({
+      title:"ওমর এস এস ঘর",
+      text:text,
+      url:window.location.href
+    });
+
+  }else{
+
+    alert("এই ফোনে Share অপশন পাওয়া যায়নি।");
+
+  }
+}
+
+
+/* COMMENT */
+
+async function addComment(photoId){
+
+  const name =
+  document.getElementById("name"+photoId).value.trim();
+
+  const comment =
+  document.getElementById("comment"+photoId).value.trim();
+
+  if(!name || !comment){
+
+    alert("নাম এবং মন্তব্য লিখুন।");
+    return;
+
+  }
+
+  const {error} =
+  await supabaseClient
+  .from("comments")
+  .insert({
+    design_id:photoId,
+    Name:name,
+    comment:comment
+  });
+
+  if(error){
+
+    console.log(error);
+
+    alert("মন্তব্য পাঠানো যায়নি।");
+
+    return;
+
+  }
+
+  document.getElementById("name"+photoId).value="";
+  document.getElementById("comment"+photoId).value="";
+
+  loadComments(photoId);
+}
+
+
+/* LOAD COMMENTS */
+
+async function loadComments(photoId){
+
+  const {data,error} =
+  await supabaseClient
+  .from("comments")
+  .select("*")
+  .eq("design_id",photoId)
+  .order("created_at",{ascending:true});
+
+  if(error){
+
+    console.log(error);
+    return;
+
+  }
+
+  const box =
+  document.getElementById("comments"+photoId);
+
+  box.innerHTML="";
+
+  data.forEach(item=>{
+
+    const div =
+    document.createElement("div");
+
+    div.className="comment";
+
+    div.innerHTML=`
+      <strong>${escapeHTML(item.Name || "অতিথি")}</strong>
+      <span>${escapeHTML(item.comment || "")}</span>
+    `;
+
+    box.appendChild(div);
+
+  });
+}
+
+
+/* SECURITY */
+
+function escapeHTML(text){
+
+  const div=document.createElement("div");
+
+  div.textContent=text;
+
+  return div.innerHTML;
+}
+
+
+/* LOAD */
+
+loadComments(1);
+loadComments(2);
+loadComments(3);
+loadComments(4);
+
+</script>
 
 </body>
 </html>
